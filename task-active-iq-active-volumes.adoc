@@ -1,0 +1,221 @@
+---
+permalink: task-active-iq-active-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, active, volumes 
+summary: Erfahren Sie mehr über das Anzeigen von Volume-Details in SolidFire Active IQ. 
+---
+= Aktive Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *Volumes* können Sie Details zu aktiven Volumes, einzelnen Volumes und Performance-Diagrammen anzeigen:
+
+*  active volume details
+*  individual volume details
+*  individual volume performance graphs
+
+
+
+
+== Details zum aktiven Volume anzeigen
+
+Auf der Seite *Volumes* > *Aktive Volumes* für einen ausgewählten Cluster können Sie die folgenden Informationen in der Liste der aktiven Volumes anzeigen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| ID | ID, die beim Erstellen des Volumes angegeben wurde. 
+
+
+| Konto-ID | ID des Kontos, der dem Volume zugewiesen wurde. 
+
+
+| Volume-Größe | Größe des Volumes, aus dem der Snapshot erstellt wurde. 
+
+
+| Genutzte Kapazität  a| 
+Aktuell genutzte Kapazität des Volumes:
+
+* Grün = bis zu 80 %
+* Gelb = über 80 %
+* Rot = über 95 %
+
+
+
+
+| Primäre Knoten-ID | Primärer Node für dieses Volume. 
+
+
+| Sekundäre Knoten-ID | Liste der sekundären Nodes für dieses Volume Kann mehrere Werte während vorübergehender Zustände sein, wie die Änderung von sekundären Knoten, hat aber in der Regel einen einzigen Wert. 
+
+
+| QoS-Gasbetätigung  a| 
+Identifiziert, ob das Volume gedrosselt wird, weil der primäre Storage-Node sehr stark belastet ist:
+
+* Grün = bis zu 20 %
+* Gelb = über 20 %
+* Rot = über 80 %
+
+
+
+
+| IOPS-Minimum | Die Mindestzahl an IOPS für das Volume garantiert. 
+
+
+| IOPS-Maximum | Maximal zulässige IOPS für das Volume 
+
+
+| IOPS-Burst | Die maximale Anzahl an IOPS, die über einen kurzen Zeitraum zulässig sind. 
+
+
+| IOPS-Durchschnitt letzte 30 Minuten | Die durchschnittliche Anzahl an IOPS, die für alle Volumes ausgeführt werden, in denen dieser Node primär ausgeführt wird. IOPS werden im Cluster über Intervalle von 500 Millisekunden erfasst. SolidFire Active IQ sammelt diese Werte in Intervallen von 60 Sekunden. Die durchschnittlichen IOPS jedes Volumes werden anhand der SolidFire Active IQ Werte berechnet, die in den letzten 30 Minuten erfasst wurden. 
+
+
+| Durchschnittlicher Durchsatz Letzte 30 Minuten | Der durchschnittliche Durchsatz, der für alle Volumes mit diesem Node als primär ausgeführt wird. Der Durchsatz wird im Cluster über Intervalle von 500 Millisekunden erfasst. SolidFire Active IQ sammelt diese Werte in Intervallen von 60 Sekunden. Der durchschnittliche Durchsatz wird für jedes Volume anhand der SolidFire Active IQ-Werte berechnet, die in den letzten 30 Minuten erfasst wurden. 
+
+
+| Durchschnittliche Latenz (µs) Letzte 30 Min | Der durchschnittliche Zeitaufwand in Mikrosekunden, um Lese- und Schreibvorgänge für alle Volumes abzuschließen, bei denen dieser Node als primärer Node gilt. Die Latenz wird in Abständen von mehr als 500 Millisekunden auf der Cluster-Seite gemessen. SolidFire Active IQ sammelt diese Werte in Intervallen von 60 Sekunden. Die durchschnittliche Latenz wird für jedes Volume anhand der in den letzten 30 Minuten gesammelten SolidFire Active IQ-Werte berechnet. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_is_read_and_write_latency_measured_in_Element_Software_%3F["KB-Artikel"^]. 
+
+
+| Snapshots | Die Anzahl der für das Volume erstellten Snapshots. 
+
+
+| Aktionen | Wählen Sie das vertikale Dropdown-Menü aus, um weitere Details zu einem einzelnen Volumen anzuzeigen. 
+|===
+
+
+== Details zu einzelnen Volumes anzeigen
+
+Auf der Seite *Bände* können Sie mehr Informationen zu einem einzelnen Volumen anzeigen.
+
+.Schritte
+. Wählen Sie *Volumes* > *Aktive Volumes* Aus.
+. Wählen Sie in der Spalte Aktionen die aus image:more_information.PNG["Weitere Informationen"] Symbol für die gewünschte Lautstärke und wählen Sie *Details anzeigen*.
+
+
+Nachdem die Seite für das aktive Volume geöffnet wurde, können Sie die letzten Volume-Daten in der Informationsleiste anzeigen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Konto-ID | Vom System generierte ID für das Volume: 
+
+
+| Volume-Größe | Gesamtgröße des Volumes: 
+
+
+| Genutzte Kapazität  a| 
+Zeigt an, wie voll das Volume ist:
+
+* Grün = bis zu 80 %
+* Gelb = über 80 %
+* Rot = über 95 %.
+
+
+
+
+| IOPS-Durchschnitt | Durchschnittliche IOPS-Anzahl der letzten 30 Minuten für das Volume. 
+
+
+| Durchschnittlicher Durchsatz | Ein durchschnittlicher Durchsatz, der in den letzten 30 Minuten mit dem Volume ausgeführt wurde 
+
+
+| Durchschnittliche Latenz | Die durchschnittliche Zeit in Mikrosekunden, die Lese- und Schreibvorgänge auf das Volume in den letzten 30 Minuten abgeschlossen hat. Weitere Informationen finden Sie unter https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_is_read_and_write_latency_measured_in_Element_Software_%3F["KB-Artikel"^]. 
+
+
+2+| Weitere Details können Sie im Dropdown-Menü *Volume Details anzeigen* anzeigen. 
+
+
+| Datenzugriff | Die Lese-/Schreibberechtigungen, die dem Volume zugewiesen sind. 
+
+
+| Zugriffsgruppen | Zugeordnete Volume-Zugriffsgruppen. 
+
+
+| Blöcke Ohne Null | Gesamtzahl von 4KiB-Blöcken mit Daten nach Abschluss der letzten Runde der Müllsammlung. 
+
+
+| Blöcke Mit Null | Gesamtzahl von 4KiB-Blöcken ohne Daten nach Abschluss der letzten Runde der Müllsammlung. 
+
+
+| Anzahl Snapshots | Die Anzahl der damit verbundenen Snapshots. 
+
+
+| IOPS-Minimum | Die Mindestzahl an IOPS für das Volume garantiert. 
+
+
+| IOPS-Maximum | Maximal zulässige IOPS für das Volume 
+
+
+| IOPS-Burst | Die maximale Anzahl an IOPS, die über einen kurzen Zeitraum zulässig sind. 
+
+
+| 512e aktiviert | Identifiziert, wenn 512e auf einem Volume aktiviert ist. 
+
+
+| QoS-Gasbetätigung | Identifiziert, ob das Volume gedrosselt wird, weil der primäre Storage-Node sehr stark belastet ist. 
+
+
+| Primäre Knoten-ID | Primärer Node für dieses Volume. 
+
+
+| Sekundäre Knoten-ID | Liste der sekundären Nodes für dieses Volume Kann mehrere Werte während vorübergehender Zustände sein, wie die Änderung von sekundären Knoten, hat aber in der Regel einen einzigen Wert. 
+
+
+| Volumes Gekoppelt | Gibt an, ob ein Volume gekoppelt wurde oder nicht. 
+
+
+| Erstellungszeit | Die Zeit, zu der die Volume-Erstellung abgeschlossen wurde. 
+
+
+| Blockgröße | Größe der Blöcke auf dem Volume. 
+
+
+| IQN | Der iSCSI-qualifizierte Name (IQN) des Volumes. 
+
+
+| ScsiEUIDeviceID | Weltweit eindeutige SCSI-Gerätekennung für das Volume im 16-Byte-Format auf Basis von EUI-64. 
+
+
+| ScsiNAADeviceID | Weltweit eindeutige SCSI-Gerätekennung für das Volume im NAA IEEE-Registered Extended-Format. 
+
+
+| Merkmale | Liste von Name/Wert-Paaren im JSON-Objektformat. 
+|===
+
+
+== Individuelle Volume-Performance-Diagramme anzeigen
+
+Auf der Seite *Volumes* können Sie Leistungsaktivitäten für jeden Datenträger in einem grafischen Format anzeigen. Diese Information bietet Echtzeitstatistiken für Durchsatz, IOPS, Latenz, Warteschlangentiefe, durchschnittliche I/O-Größe Und Kapazität für jedes Volume.
+
+.Schritte
+. Wählen Sie *Volumes* > *Aktive Volumes* Aus.
+. Wählen Sie in der Spalte *Aktionen* die aus image:more_information.PNG["Weitere Informationen"] Symbol für die gewünschte Lautstärke und wählen Sie *Details anzeigen*.
++
+Eine separate Seite wird geöffnet, um eine einstellbare Zeitleiste anzuzeigen, die mit den Leistungsdiagrammen synchronisiert wird.
+
+. Wählen Sie links ein Diagramm aus, um Performance-Diagramme im Detail anzuzeigen. Sie können die folgenden Diagramme anzeigen:
++
+** Durchsatz
+** IOPS
+** Latenz
+** Warteschlangentiefe
+** Durchschnittliche I/O-Größe
+** Kapazität
+
+
+. (Optional) Sie können jede Grafik als CSV-Datei exportieren, indem Sie die auswählen image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

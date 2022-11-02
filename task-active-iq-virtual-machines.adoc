@@ -1,0 +1,82 @@
+---
+permalink: task-active-iq-virtual-machines.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, virtual, machines, vm 
+summary: Erfahren Sie mehr über die Seite Virtual Machines in SolidFire Active IQ. 
+---
+= Virtual Machines
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *Virtual Machines*, die über das Seitenfeld eines ausgewählten NetApp HCI-Clusters verfügbar ist, können Sie CPU- und speicherbezogene Statusinformationen zu virtuellen Maschinen (VMs) anzeigen.
+
+
+NOTE: Die Seite *Virtuelle Maschinen* ist nur auf einem NetApp HCI Cluster verfügbar.
+
+Erfahren Sie mehr über die Filterung und das Verständnis der in der UI angezeigten VM-Daten.
+
+
+
+== Zeigen Sie Details zu Virtual Machines an
+
+Die Seite *Virtual Machines*, die über das Seitenfeld eines ausgewählten Clusters verfügbar ist, enthält Informationen zu jeder aktiven VM, die mit dem Cluster verknüpft ist.
+
+Neben herkömmlichen Filteroptionen, die auf allen SolidFire Active IQ-Seiten verfügbar sind, verfügt die Seite *Virtuelle Maschinen* über Schnellfilterschaltflächen, die Sie auswählen können, um den allgemeinen VM-Status der Verfügbarkeit zu bestimmen.
+
+Die Informationsleiste bietet einen schnellen Überblick über die folgenden Daten:
+
+* Virtual Machines: Die Anzahl und verschiedene Verfügbarkeitszustände von VMs, die dem Storage-Cluster zugeordnet sind.
+* Status: Anzahl der Warnungen oder Fehler für die VMs.
+* Bereitgestellte Ressourcen: Die gesamten Storage- und Speicherressourcen für alle VMs, die dem Storage-Cluster zugeordnet sind.
+
+
+[cols="30,70"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Name | Der freundliche Name der VM. 
+
+
+| Status  a| 
+Der Verfügbarkeitsstatus der VM:
+
+* Normal: Die VM antwortet wie erwartet.
+* Warnung: Es wurde eine Warnung gemeldet. Weitere Informationen finden Sie unter vSphere.
+* Kritisch: Ein kritischer Fehler wurde gemeldet. Weitere Informationen finden Sie unter vSphere.
+* Unbekannt: Auf die VM kann nicht zugegriffen werden.
+
+
+
+
+| Stromzustand | Gibt an, ob die VM eingeschaltet, ausgeschaltet oder ausgesetzt ist. 
+
+
+| VCenter IP | IP-Adresse des vCenter Servers. 
+
+
+| Anzahl der CPUs | Die Anzahl der CPUs für jede VM. 
+
+
+| Host-Speicherauslastung | Die Menge des ESXi Hostspeichers, der von einer virtuellen Maschine verwendet wird. 
+
+
+| CPU-Auslastung | Der Prozentsatz der aktiv genutzten virtuellen CPU als Prozentsatz der insgesamt verfügbaren CPU in der VM 
+
+
+| Genutzte Kapazität | Der Prozentsatz der verwendeten VM-Storage-Ressourcen. 
+
+
+| Maximale Festplattenlatenz | Die maximale erkannte Festplattenlatenz in Millisekunden. 
+
+
+| Alarme | Die Anzahl der ausgelösten vSphere Alarme auf der VM. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

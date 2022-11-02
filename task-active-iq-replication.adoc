@@ -1,0 +1,99 @@
+---
+permalink: task_active_iq_replication.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, replication 
+summary: Erfahren Sie mehr über die Replikationsseite in SolidFire Active IQ. 
+---
+= Replizierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Seite *Replikation*, die im Seitenbereich für einen ausgewählten Cluster verfügbar ist, enthält Informationen zu Cluster-Paaren und Volume-Paaren.
+
+Erfahren Sie mehr über die Seiten zu Cluster-Paaren und Volumes-Paaren:
+
+* ,Cluster-Paare
+* ,Volume-Paare
+
+
+
+
+== Cluster-Paare
+
+Auf der Seite *Replikation* > *Cluster-Paare* für einen ausgewählten Cluster können Sie die folgenden Informationen zu Cluster-Paaren anzeigen.
+
+[cols="30,70"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Cluster-Paar-ID | ID-Nummer, die beim Erstellen des Cluster-Paars angegeben wurde. 
+
+
+| Remote-Cluster-Name | Name des Remote-Clusters des Paars. 
+
+
+| Remote-MVIP | Management Virtual IP des Remote-Clusters: 
+
+
+| Replizierung Von Volumes | Gibt die Anzahl der Volumes an, die auf dem gepaarten Cluster repliziert werden. 
+
+
+| Status | Status des Cluster-Paars. 
+
+
+| UUID | Universell eindeutige Kennung. 
+|===
+
+
+== Volume-Paare
+
+Auf der Seite *Replikation* > *Volume Pairs* für einen ausgewählten Cluster können Sie die folgenden Informationen zu Volume-Paaren anzeigen.
+
+[cols="30,70"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Volume-ID | ID-Nummer, die beim Erstellen des Volumes angegeben wurde. 
+
+
+| Konto-ID | ID des Kontos, der dem Volume zugewiesen wurde. 
+
+
+| Volume-Status | Zustand des replizierten Volumes. 
+
+
+| Replikationsmodus | Für das Volume-Paar ausgewählter Modetyp. 
+
+
+| Richtung  a| 
+Gibt die Richtung der Volume-Daten an:
+
+* Quelle: Gibt an, dass Daten auf ein Ziel außerhalb des Clusters geschrieben werden.
+* Ziel: Gibt an, dass von einer externen Quelle Daten auf das lokale Volume geschrieben werden.
+
+
+
+
+| Asynchrone Verzögerung  a| 
+Dauer, seit das Volume zuletzt mit dem Remote-Cluster synchronisiert wurde. Wenn das Volume nicht gekoppelt ist, ist dieser Wert Null.
+
+
+NOTE: Ein Ziel-Volume im aktiven Replikationszustand hat immer eine asynchrone Verzögerung von 0 (Null). Ziel-Volumes erkennen während der Replizierung das System und gehen davon aus, dass die asynchrone Verzögerung zu jeder Zeit korrekt ist.
+
+
+
+| Remote-Cluster | Name des Remote-Clusters, auf dem sich das Volume befindet. 
+
+
+| Remote-Volume-ID | Volume-ID des Volumes im Remote-Cluster. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

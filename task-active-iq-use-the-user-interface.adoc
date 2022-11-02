@@ -1,0 +1,177 @@
+---
+permalink: task-active-iq-use-the-user-interface.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, enable, reporting 
+summary: Informieren Sie sich über die Merkmale und Funktionen der Benutzeroberfläche in SolidFire Active IQ. 
+---
+= Verwenden Sie die SolidFire Active IQ-Benutzeroberfläche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie mehr über die Funktionen der Benutzeroberfläche in link:https://activeiq.solidfire.com/["SolidFire Active IQ (Anmeldung erforderlich)"^]:
+
+*  filters
+*  lists
+*  graphs and select date ranges
+*  list views and report data
+*  a cluster
+*  reference
+*  feedback
+
+
+
+
+== Verwenden Sie Filter
+
+In SolidFire Active IQ können Sie Listeninformationen zu Seiten sortieren und filtern. Bei der Anzeige von Listen (z. B. Nodes, Laufwerke, Volumes usw.) können Sie die Filterfunktion nutzen, um die Informationen zu fokussieren und einfacher auf den Bildschirm zu passen.
+
+.Schritte
+. Wählen Sie beim Anzeigen von Listeninformationen *Filter* aus.
+. Wählen Sie im Dropdown-Menü einen Spaltennamen aus, nach dem gefiltert werden soll.
+. Wählen Sie eine Bedingung für die Spalte aus.
+. Text eingeben, nach dem gefiltert werden soll.
+. Wählen Sie *Filter Hinzufügen*.
++
+Das System führt den neuen Filter auf den Informationen in der Liste aus und speichert den neuen Filter vorübergehend. Der ausgewählte Filter wird unten im Filterdialogfeld angezeigt.
+
+. (Optional) Sie können einen weiteren Filter hinzufügen, indem Sie die folgenden Schritte ausführen:
++
+.. Wählen Sie eine andere Spaltenüberschrift und Bedingung aus.
+.. Wählen Sie *Filter Hinzufügen*.
+
+
+. (Optional) Wählen Sie (*x*), um die Filter zu entfernen und die ungefilterten Listeninformationen anzuzeigen.
+
+
+
+NOTE: Einige Tabellen enthalten die Option zum Ausschließen von Spalten aus der Ansicht. Um die besten Ergebnisse zu erzielen, wählen Sie *Spalten* aus, um zu bestätigen, dass alle erforderlichen Spalten beim Festlegen der Filter angezeigt werden.
+
+
+
+== Sortierlisten
+
+Sie können Listeninformationen innerhalb der SolidFire Active IQ-Benutzeroberfläche nach einer oder mehreren Spalten auf bestimmten Seiten sortieren. Auf diese Weise können Sie die Informationen, die Sie auf dem Bildschirm benötigen, ordnen.
+
+.Schritte
+. Um eine Spalte zu sortieren, wählen Sie die Spaltenüberschrift aus, bis die Informationen in der gewünschten Reihenfolge sortiert sind.
+. So sortieren Sie mehrere Spalten:
++
+.. Wählen Sie die Spaltenüberschrift der ersten Spalte aus, die sortiert werden soll, bis die Informationen in der gewünschten Reihenfolge sortiert sind.
+.. Um eine Spalte hinzuzufügen, halten Sie die Befehlstaste gedrückt und wählen Sie die Spaltenüberschrift aus, bis die Informationen in der gewünschten Reihenfolge sortiert sind. Sie können mehr als eine Spalte hinzufügen.
+
+
++
+Diese Funktion steht nicht auf allen Seiten zur Verfügung.
+
+
+
+
+
+== Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus
+
+Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich alle Diagramme auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage.
+
+Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Darüber hinaus können Sie ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten gelangen. Wenn verfügbar, wechseln Sie zwischen den Diagrammen, indem Sie die Miniaturansicht-Layouts auf der linken Seite auswählen. Diese Layouts können auch ausgeblendet werden.
+
+Positionieren Sie den Mauszeiger über einer Diagrammlinie, um Details zu den Zeitpunkten anzuzeigen.
+
+.Erweitern Sie das Diagramm-Beispiel
+====
+image:graphs_and_date_ranges.PNG["Diagramme und Datumsbereiche"]
+
+====
+
+
+== Exportieren von Listenansichten und Berichtsdaten
+
+Sie können eine gesamte Listenansicht exportieren oder Daten in ein CSV-Format (Comma Separated values) exportieren. In einigen Listen, z. B. Cluster oder Nodes, können Sie auswählen, welche Spalten exportiert werden; standardmäßig sind die angezeigten Spalten ausgewählt. Wenn es eine bestimmte Sortierreihenfolge gibt oder ein Filter zur Begrenzung der angezeigten Einträge verwendet wird, bleiben Sortierreihenfolge und Filter in der exportierten Datei erhalten.
+
+.Schritte
+. Wählen Sie in einer Listenansicht oder Grafik die aus image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+
+
+
+== Wählen Sie ein Cluster aus
+
+In SolidFire Active IQ können Sie Informationen über ein einzelnes Cluster in Ihrer Umgebung anzeigen.
+
+.Schritte
+. Wählen Sie im SolidFire Active IQ Dashboard * Cluster auswählen* aus.
+. Im Dropdown-Menü werden alle für Sie verfügbaren Cluster aufgelistet.
+. Verwenden Sie das Suchfeld, um den gewünschten Cluster oder zuletzt angezeigte Cluster zu finden.
+. Wählen Sie den Namen aus, um den Cluster auszuwählen.
+
+
+
+
+== Symbolreferenz
+
+Möglicherweise werden bei der Anzeige der SolidFire Active IQ-Benutzeroberfläche die folgenden Symbole angezeigt:
+
+[cols="25,75"]
+|===
+| Symbol | Beschreibung 
+
+
+ a| 
+image:refresh.PNG["Symbol „Aktualisieren“"]
+| Aktualisierung 
+
+
+ a| 
+image:filter.PNG["Filtersymbol"]
+| Filtern 
+
+
+ a| 
+image:export_button.PNG["Schaltfläche Exportieren"]
+| Exportieren 
+
+
+ a| 
+image:menu.PNG["Menüsymbol"]
+| Menü für Kontoeinstellungen, Dokumentation, Feedback, Support und Abmelden. 
+
+
+ a| 
+image:copy.PNG["In Zwischenablage kopieren Symbol"]
+| Wählen Sie ein Mal aus, um in die Zwischenablage zu kopieren. 
+
+
+ a| 
+image:wrap_toggle.PNG["Umschlag Text umwickeln"]
+image:unwrap_toggle.PNG["Umschlag Text umwickeln"]
+| Durch Umschalten der Schaltfläche wird Text umwickeln und entpacken angezeigt. 
+
+
+ a| 
+image:more_information.PNG["Symbol für weitere Informationen"]
+| Weitere Informationen. Wählen Sie, um weitere Optionen anzuzeigen. 
+
+
+ a| 
+image:more_details.PNG["Weitere Details"]
+| Wählen Sie, um weitere Informationen zu erhalten. 
+|===
+
+
+== Feedback mitteilen
+
+Sie können die SolidFire Active IQ-Benutzeroberfläche verbessern und alle UI-Probleme beheben, indem Sie die in der gesamten Benutzeroberfläche verfügbare E-Mail-Feedback-Option verwenden.
+
+.Schritte
+. Wählen Sie auf einer beliebigen Seite der Benutzeroberfläche die aus image:menu.PNG["Menüsymbol"] Symbol und wählen Sie *Feedback*.
+. Geben Sie die relevanten Informationen in den Nachrichtentext der E-Mail ein.
+. Fügen Sie hilfreiche Screenshots an.
+. Wählen Sie *Senden*.
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

@@ -1,0 +1,402 @@
+---
+permalink: task-active-iq-alerts.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, alerts 
+summary: Hier finden Sie Informationen zu Aufgaben im Zusammenhang mit Warnmeldungen in SolidFire Active IQ. 
+---
+= Meldungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Über das Dropdown-Menü *Alerts* in *Alle Cluster View* können Sie den Warnungsverlauf anzeigen, Alarmrichtlinien erstellen und verwalten sowie Cluster-Benachrichtigungen anzeigen und unterdrücken.
+
+Informationen zu Aufgaben mit Warnmeldungen oder Durchführung:
+
+*  alerts history
+*  history details
+*  alert policies
+* ,Erstellen einer Meldungsrichtlinie
+* ,Meldungsrichtlinientypen
+*  an alert policy
+*  an alert policy
+*  suppressed clusters
+*  cluster notifications
+*  cluster suppression from a cluster
+*  notification email
+
+
+
+
+== Anzeigen des Alarmverlaufs
+
+Sie können den Verlauf für ungelöste oder gelöste Warnmeldungen anzeigen.
+
+.Schritte
+. Wählen Sie *Alarme* > *Verlauf*.
+. Wählen Sie entweder die Registerkarte *nicht aufgelöst* oder *aufgelöst* aus, um den Verlauf der Warnmeldungen für den Cluster anzuzeigen.
+. (Optional) Wählen Sie die aus image:export_button.PNG["Schaltfläche Exportieren"] Symbol zum Exportieren der Daten in eine CSV-Datei.
+
+
+
+
+== Details zum Alarmverlauf
+
+Auf der Seite *Verlauf* im Dropdown-Menü Warnungen in der Ansicht Alle Cluster werden bis zu 10000 Einträge des Alarmverlaufs angezeigt, einschließlich aller ungelösten Warnmeldungen und Alarme, die in den letzten 30 Tagen behoben wurden.
+
+In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung stehen:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Alarm-ID | Eindeutige ID für jede Warnmeldung. 
+
+
+| Ausgelöst | Die Zeit, zu der die Meldung in SolidFire Active IQ ausgelöst wurde, nicht im Cluster selbst. 
+
+
+| Letzte Benachrichtigung | Die Zeit, zu der die letzte Alarm-E-Mail gesendet wurde. 
+
+
+| Behoben | Zeigt an, ob die Ursache der Warnmeldung behoben wurde. 
+
+
+| Auflösungszeit | Der Zeitpunkt, an dem ein Problem behoben wurde. 
+
+
+| Richtlinie | Dies ist der benutzerdefinierte Name der Meldungsrichtlinie. 
+
+
+| Schweregrad | Der Schweregrad, der zum Zeitpunkt der Erstellung der Meldungsrichtlinie zugewiesen wurde. 
+
+
+| Ziel | Die E-Mail-Adresse oder Adressen, die für den Empfang der E-Mail-Benachrichtigung ausgewählt wurden. 
+
+
+| Gesellschaft | Name des Kunden, der der Meldung zugeordnet ist. 
+
+
+| Cluster | Zeigt den Cluster-Namen an, dessen Meldungsrichtlinie hinzugefügt wurde. 
+
+
+| Trigger | Die benutzerdefinierte Einstellung, die die Warnung ausgelöst hat. 
+|===
+
+
+== Anzeigen von Meldungsrichtlinien
+
+Auf der Seite *Richtlinien* im Dropdown-Menü *Alarme* in *Alle Cluster-Ansicht* werden die folgenden Richtlinieninformationen für alle Cluster angezeigt.
+
+In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung stehen:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Name Der Richtlinie | Benutzerdefinierter Name der Meldungsrichtlinie. 
+
+
+| Ziel | E-Mail-Adresse, die in der Meldungsrichtlinie definiert wurde. 
+
+
+| Schweregrad | Der in der Meldungsrichtlinie zugewiesene Schweregrad. 
+
+
+| Cluster | Anzahl und Name jedes in der Meldungsrichtlinie definierten Clusters. Wählen Sie das Informationssymbol aus, um die zugeordneten Cluster anzuzeigen. 
+
+
+| Zustand | Benutzerdefinierte Einstellung für den Zeitpunkt, zu dem eine Warnung ausgelöst werden soll. 
+
+
+| Unterdrückungstypen  a| 
+Legt fest, welche Warnmeldungen und Ereignisse unterdrückt werden. Folgende Typen sind möglich:
+
+* *Voll*: Alle Warnungen für den Cluster werden für die angegebene Dauer unterdrückt. Es werden keine Support-Cases oder E-Mail-Benachrichtigungen generiert.
+* *Upgrades*: Nicht kritische Cluster-Warnungen werden für die angegebene Dauer unterdrückt. Kritische Warnungen generieren weiterhin Support-Fälle und E-Mails.
+* *Computing*: Warnungen, die von VMware auf den Computing-Nodes ausgelöst werden, werden unterdrückt.
+* *NodeHardware*: Warnungen, die mit der Knotenwartung verbunden sind, werden unterdrückt. Beispielsweise lassen sich Laufwerke austauschen oder Nodes offline schalten.
+* *Laufwerk*: Warnungen, die mit dem Laufwerkszustand verbunden sind, werden unterdrückt.
+* *Netzwerk*: Warnungen, die mit der Netzwerkkonfiguration und dem Zustand verbunden sind, werden unterdrückt.
+* *Leistung*: Stromredundanz-Warnungen werden unterdrückt. Es unterdrückt keine _nodeOffline_ Warnung, die bei einem totalen Stromausfall auftreten würde.
+
+
+
+
+| Aktionen | Wählen Sie das vertikale Dropdown-Menü für Optionen zum Bearbeiten und Löschen der ausgewählten Richtlinie aus. 
+|===
+
+
+== Erstellen einer Meldungsrichtlinie
+
+Sie können eine Meldungsrichtlinie erstellen, um Informationen aus der *Alle Cluster-Ansicht* in SolidFire Active IQ zu überwachen. Mithilfe von Warnrichtlinien können Sie bei einem oder mehreren Clustern innerhalb einer Installation über Status- oder Performance-Ereignisse benachrichtigt werden, sodass vor oder als Reaktion auf ein schwerwiegendes Ereignis Maßnahmen ergriffen werden können.
+
+.Schritte
+. Wählen Sie *Alarme* > *Richtlinien*.
+. Wählen Sie *Create Policy*.
+. Wählen Sie einen Alarmtyp aus der Liste *Richtlinientyp* aus. Siehe ,Meldungsrichtlinientypen.
++
+
+NOTE: Im Dialogfeld *Create Policy* gibt es je nach gewähltem Richtlinientyp weitere Policy-spezifische Felder.
+
+. Geben Sie einen Namen für die neue Meldungsrichtlinie ein.
++
+
+NOTE: Meldungsrichtlinien-Namen sollten die Bedingung beschreiben, für die die Meldung erstellt wird. Beschreibende Titel helfen bei der einfachen Identifikation der Warnmeldung. Namen von Meldungsrichtlinien werden an anderer Stelle im System als Referenz angezeigt.
+
+. Wählen Sie einen Schweregrad aus.
++
+
+TIP: Die Schweregrade der Alarmrichtlinie sind farblich codiert und können leicht von der Seite *Alerts* > *Historie* gefiltert werden.
+
+. Bestimmen Sie die Art der Unterdrückung für die Alarmrichtlinie, indem Sie einen Typ aus *supporsible Types* auswählen. Sie können mehrere Typen auswählen.
++
+Bestätigen Sie, dass die Assoziationen Sinn ergeben. Sie haben z. B. für eine Netzwerkwarnrichtlinie *Network Suppression* ausgewählt.
+
+. Wählen Sie ein oder mehrere Cluster aus, die in die Richtlinie einbezogen werden sollen.
++
+
+CAUTION: Wenn Sie der Installation nach dem Erstellen der Richtlinie ein neues Cluster hinzufügen, wird das Cluster nicht automatisch zu vorhandenen Warnrichtlinien hinzugefügt. Sie müssen eine vorhandene Meldungsrichtlinie bearbeiten und den neuen Cluster auswählen, der der Richtlinie zugeordnet werden soll.
+
+. Geben Sie eine oder mehrere E-Mail-Adressen ein, an die Benachrichtigungen gesendet werden. Wenn Sie mehrere Adressen eingeben, müssen Sie die einzelnen Adressen mit einem Komma trennen.
+. Wählen Sie *Warnhinweise Speichern*.
+
+
+
+
+== Meldungsrichtlinientypen
+
+Sie können Alarmrichtlinien basierend auf den verfügbaren Richtlinientypen erstellen, die im Dialogfeld *Richtlinie erstellen* über *Alarme* > *Richtlinien* aufgeführt sind.
+
+Zu den verfügbaren Richtlinienalarme gehören die folgenden Typen:
+
+[cols="25,75"]
+|===
+| Richtlinientyp | Beschreibung 
+
+
+| Cluster-Fehler | Sendet eine Benachrichtigung, wenn ein bestimmter Typ oder ein beliebiger Typ von Cluster-Fehler auftritt. 
+
+
+| Ereignis | Sendet eine Benachrichtigung, wenn ein bestimmter Ereignistyp eintritt. 
+
+
+| Ausgefallenes Laufwerk | Sendet eine Benachrichtigung, wenn ein Laufwerksausfall auftritt. 
+
+
+| Verfügbares Laufwerk | Sendet eine Benachrichtigung, wenn ein Laufwerk im Status „_available_“ online geschaltet wird. 
+
+
+| Cluster-Auslastung | Sendet eine Benachrichtigung, wenn die verwendete Cluster-Kapazität und -Performance mehr als der angegebene Prozentsatz ist. 
+
+
+| Nutzbarer Speicherplatz | Sendet eine Benachrichtigung, wenn der nutzbare Cluster-Speicherplatz unter einem angegebenen Prozentsatz liegt. 
+
+
+| Vorstellbare Fläche | Sendet eine Benachrichtigung, wenn der bereitstellbare Cluster-Speicherplatz kleiner als ein angegebener Prozentsatz ist. 
+
+
+| Collector Not Reporting | Sendet eine Benachrichtigung, wenn der Collector für SolidFire Active IQ, der auf dem Management-Node ausgeführt wird, während der angegebenen Dauer keine Daten an SolidFire Active IQ sendet. 
+
+
+| Laufwerksabnutzung | Sendet eine Benachrichtigung, wenn ein Laufwerk in einem Cluster weniger als einen bestimmten Prozentsatz des verbleibenden Abnutzung oder des verbleibenden Speicherplatzes aufweist. 
+
+
+| ISCSI-Sitzungen | Sendet eine Benachrichtigung, wenn die Anzahl aktiver iSCSI-Sitzungen größer als der angegebene Wert ist. 
+
+
+| Ausfallsicherheit Im Chassis | Sendet eine Benachrichtigung, wenn der verwendete Speicherplatz eines Clusters größer als ein vom Benutzer angegebener Prozentsatz ist. Wählen Sie einen Prozentsatz aus, der ausreichend ist, um einen frühzeitigen Hinweis zu erhalten, bevor Sie den Schwellenwert für die Cluster-Stabilität erreichen. Nachdem ein Cluster diesen Schwellenwert erreicht hat, kann es bei einem Ausfall auf Chassis-Ebene nicht mehr automatisch repariert werden. 
+
+
+| VMware Alarm | Sendet eine Benachrichtigung, wenn ein VMware Alarm ausgelöst und an SolidFire Active IQ gemeldet wird. 
+
+
+| Ausfallsicherheit Individueller Schutzdomänen | Wenn der verwendete Speicherplatz den angegebenen Prozentsatz des Schwellenwerts für die Ausfallsicherheit der benutzerdefinierten Schutzdomäne überschreitet, sendet das System eine Benachrichtigung. Wenn dieser Prozentsatz 100 erreicht ist, verfügt das Storage-Cluster nicht über genügend freie Kapazität, um sich nach dem Ausfall einer benutzerdefinierten Sicherungsdomäne selbst zu heilen. 
+
+
+| Knoten Kern / Crash-Dump-Dateien | Wenn ein Service nicht mehr reagiert und neu gestartet werden muss, erstellt das System eine Core-Datei oder eine Absturz-Dump-Datei und sendet eine Benachrichtigung. Dies ist nicht das erwartete Verhalten während des normalen Betriebs. 
+|===
+
+
+== Bearbeiten einer Meldungsrichtlinie
+
+Sie können eine Meldungsrichtlinie bearbeiten, um Cluster zu einer Richtlinie hinzuzufügen oder aus einer Richtlinie zu entfernen oder zusätzliche Richtlinieneinstellungen zu ändern.
+
+.Schritte
+. Wählen Sie *Alarme* > *Richtlinien*.
+. Wählen Sie das Menü aus, um weitere Optionen unter *Aktionen* anzuzeigen.
+. Wählen Sie *Richtlinie Bearbeiten*.
++
+
+NOTE: Der Richtlinientyp und die type-spezifischen Überwachungskriterien können nicht bearbeitet werden.
+
+. (Optional) Geben Sie einen überarbeiteten Namen für die neue Meldungsrichtlinie ein.
++
+
+NOTE: Meldungsrichtlinien-Namen sollten die Bedingung beschreiben, für die die Meldung erstellt wird. Beschreibende Titel helfen bei der einfachen Identifikation der Warnmeldung. Namen von Meldungsrichtlinien werden an anderer Stelle im System als Referenz angezeigt.
+
+. (Optional) Wählen Sie einen anderen Schweregrad aus.
++
+
+TIP: Die Schweregrade für die Meldungsrichtlinie sind farblich kodiert und lassen sich problemlos über die Seite „Meldungen > Verlauf“ filtern.
+
+. Bestimmen Sie die Art der Unterdrückung für die Alarmrichtlinie, wenn sie aktiv ist, indem Sie einen Typ aus *supporsible Types* auswählen. Sie können mehrere Typen auswählen.
++
+Bestätigen Sie, dass die Assoziationen Sinn ergeben. Sie haben z. B. für eine Netzwerkwarnrichtlinie *Network Suppression* ausgewählt.
+
+. (Optional) Wählen oder entfernen Sie Cluster-Zuordnungen mit der Richtlinie.
++
+
+CAUTION: Wenn Sie der Installation nach dem Erstellen der Richtlinie ein neues Cluster hinzufügen, wird das Cluster nicht automatisch zu vorhandenen Meldungsrichtlinien hinzugefügt. Sie müssen den neuen Cluster auswählen, den Sie mit der Richtlinie verknüpfen möchten.
+
+. (Optional) Ändern Sie eine oder mehrere E-Mail-Adressen, an die Benachrichtigungen gesendet werden. Wenn Sie mehrere Adressen eingeben, müssen Sie die einzelnen Adressen mit einem Komma trennen.
+. Wählen Sie *Warnhinweise Speichern*.
+
+
+
+
+== Löschen einer Meldungsrichtlinie
+
+Durch Löschen einer Meldungsrichtlinie wird diese endgültig aus dem System entfernt. E-Mail-Benachrichtigungen werden für diese Richtlinie nicht mehr gesendet, und Cluster-Zuordnungen zu der Richtlinie werden entfernt.
+
+.Schritte
+. Wählen Sie *Alarme* > *Richtlinien*.
+. Wählen Sie unter *Actions* das Menü aus, um weitere Optionen anzuzeigen.
+. Wählen Sie *Richtlinie Löschen*.
+. Bestätigen Sie die Aktion.
++
+Die Richtlinie wird dauerhaft aus dem System entfernt.
+
+
+
+
+
+== Unterdrückte Cluster anzeigen
+
+Auf der Seite *unterdrückte Cluster* im Dropdown-Menü *Warnungen* in der *Alle Cluster-Ansicht* können Sie eine Liste mit Clustern anzeigen, bei denen Warnungen unterdrückt werden.
+
+NetApp Support oder Kunden können Warnungsbenachrichtigungen für ein Cluster bei Wartungsarbeiten unterdrücken. Wenn Benachrichtigungen bei einem Cluster mithilfe der Upgrade-Unterdrückung unterdrückt werden, werden allgemeine Warnmeldungen, die während Upgrades auftreten, nicht gesendet. Es gibt außerdem eine Option zur vollständigen Alarmunterdrückung, mit der die Alarmierung für ein Cluster für eine bestimmte Dauer angehalten wird. Sie können alle E-Mail-Warnungen anzeigen, die nicht gesendet werden, wenn Benachrichtigungen unterdrückt werden, auf der Seite *Verlauf* des Menüs *Alarme*. Unterdrückte Benachrichtigungen werden nach Ablauf der festgelegten Dauer automatisch wieder aufgenommen.
+
+Die folgenden Informationen finden Sie auf der Seite *unterdrückte Cluster*.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Gesellschaft | Dem Cluster zugewiesener Firmenname. 
+
+
+| Cluster-ID | Zugewiesene Cluster-Nummer beim Erstellen des Clusters. 
+
+
+| Cluster-Name | Dem Cluster zugewiesener Name 
+
+
+| Startzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen gestartet wurde. 
+
+
+| Endzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen geplant ist, um zu beenden 
+
+
+| Typ  a| 
+Legt fest, welche Warnmeldungen und Ereignisse unterdrückt werden. Folgende Typen sind möglich:
+
+* *Voll*: Alle Warnungen für den Cluster werden für die angegebene Dauer unterdrückt. Es werden keine Support-Cases oder E-Mail-Benachrichtigungen generiert.
+* *Upgrades*: Nicht kritische Cluster-Warnungen werden für die angegebene Dauer unterdrückt. Kritische Warnungen generieren weiterhin Support-Fälle und E-Mails.
+* *Computing*: Warnungen, die von VMware auf den Computing-Nodes ausgelöst werden, werden unterdrückt.
+* *NodeHardware*: Warnungen, die mit der Knotenwartung verbunden sind, werden unterdrückt. Beispielsweise lassen sich Laufwerke austauschen oder Nodes offline schalten.
+* *Laufwerk*: Warnungen, die mit dem Laufwerkszustand verbunden sind, werden unterdrückt.
+* *Netzwerk*: Warnungen, die mit der Netzwerkkonfiguration und dem Zustand verbunden sind, werden unterdrückt.
+* *Leistung*: Stromredundanz-Warnungen werden unterdrückt. Es unterdrückt keine _nodeOffline_ Warnung, die bei einem totalen Stromausfall auftreten würde.
+
+
+
+
+| Aktionen | Wählen Sie die Option aus, um Benachrichtigungen für ein Cluster zu unterdrücken oder wieder aufzunehmen. 
+|===
+
+
+== Cluster-Benachrichtigungen unterdrücken
+
+Sie können Alarmbenachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster oder mehrere Cluster unterdrücken.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+.. Wählen Sie aus der Übersicht *Dashboard* das Menü Aktionen für den Cluster aus, den Sie unterdrücken möchten.
+.. Wählen Sie unter *Alerts* > *Cluster Suppression* die Option *Cluster unterdrücken* aus.
+
+
+. Gehen Sie im Dialogfeld *Warnungen für Cluster unterdrücken* wie folgt vor:
++
+.. Wenn Sie auf der Seite *Unterdrückte Cluster* die Schaltfläche *Cluster unterdrücken* ausgewählt haben, wählen Sie einen Cluster aus.
+.. Wählen Sie einen Alarmunterdrückungstyp entweder als *Full*, *Upgrades*, *Compute*, *NodeHardware*, *Drive*, *Netzwerk* oder *Power*. ,Erfahren Sie mehr über Unterdrückungstypen.
++
+
+NOTE: Ein Cluster kann mehrere Unterdrückungstypen haben, kann aber keinen Unterdrückungstyp gemeinsam nutzen. Ein Cluster kann beispielsweise eine *Full*-, *Compute*- und *Drive*-Unterdrückung haben, aber keine zwei *Full*-Unterdrückung. Wenn eine Unterdrückung bereits in einem Cluster vorhanden ist, ist sie ausgegraut. Um eine bestehende Unterdrückung zu ersetzen, wählen Sie *vorhandene* überschreiben und den neuen Unterdrückungstyp aus.
+
+.. Wählen Sie eine allgemeine Dauer aus, oder geben Sie ein benutzerdefiniertes Enddatum und eine Uhrzeit ein, während der Benachrichtigungen unterdrückt werden sollen.
+
+
+. Wählen Sie *Unterdrücken*.
++
+
+NOTE: Durch diese Aktion werden außerdem bestimmte oder alle Benachrichtigungen an den NetApp Support unterdrückt. Wenn die Cluster-Unterdrückung wirksam ist, kann NetApp Support oder jeder Benutzer, der zum Anzeigen des Clusters berechtigt ist, den Status der Unterdrückung aktualisieren.
+
+
+
+
+
+== Cluster-Unterdrückung von einem Cluster beenden
+
+Sie können die Unterdrückung von Cluster-Warnmeldungen beenden, die mit der Funktion Cluster unterdrücken angewendet wurden. Auf diese Weise können die Cluster den normalen Status von Warnmeldungen fortsetzen.
+
+.Schritte
+. Aus der *Dashboard* Übersicht oder *Alerts* > *Cluster Suppression*, Endunterdrückung für die einzelnen oder mehrere Cluster, die wieder normal melden sollen:
++
+.. Wählen Sie für einen einzelnen Cluster das Menü Aktionen für den Cluster aus, und wählen Sie *Unterdrückung beenden*.
+.. Wählen Sie für mehrere Cluster die Cluster aus und wählen Sie dann *Ausgewählte suppressions beenden* aus.
+
+
+
+
+
+
+== E-Mail zur Benachrichtigung
+
+Abonnenten von SolidFire Active IQ-Warnungen erhalten für jede Warnmeldung, die auf dem System ausgelöst wird, unterschiedliche Status-E-Mails. Es gibt drei Arten von Status-E-Mails, die mit Warnmeldungen verknüpft sind:
+
+[cols="35,65"]
+|===
+
+
+| Neue E-Mail-Benachrichtigung | Diese Art von E-Mail wird gesendet, wenn eine Benachrichtigung ausgelöst wird. 
+
+
+| Erinnerungs-E-Mail | Diese Art von E-Mail wird alle 24 Stunden gesendet, solange die Warnung weiterhin aktiv ist. 
+
+
+| Alarm – E-Mail Gelöst | Diese Art von E-Mail wird gesendet, wenn das Problem behoben ist. 
+|===
+Nach dem Erstellen einer Meldungsrichtlinie und beim Generieren einer neuen Meldung für diese Richtlinie wird eine E-Mail an die angegebene E-Mail-Adresse gesendet (siehe ,Erstellen Sie eine Meldungsrichtlinie).
+
+Je nach Art des gemeldeten Fehlers verwendet die Zeile für die E-Mail-Benachrichtigung eines der folgenden Formate:
+
+* Nicht gelöster Cluster-Fehler: `[cluster fault code] fault on [cluster name] ([severity])`
+* Gelöster Cluster-Fehler: `Resolved: [cluster fault code] fault on [cluster name] ([severity])`
+* Nicht behobene Warnmeldung: `[policy name] alert on [cluster name] ([severity])`
+* Behobene Warnmeldung Fehler: `Resolved: [policy name] alert on [cluster name] ([severity])`
+
+
+Der Inhalt der Benachrichtigungs-E-Mail ähnelt dem folgenden Beispiel:image:example_email.PNG["Beispiel für eine E-Mail"]
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

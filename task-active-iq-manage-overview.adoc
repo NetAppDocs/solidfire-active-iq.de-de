@@ -1,0 +1,32 @@
+---
+permalink: task-active-iq-manage-overview.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq 
+summary: Erfahren Sie mehr über die SolidFire Active IQ-Seiten. 
+---
+= Managen Sie SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie mehr über die Verwendung von link:https://activeiq.solidfire.com/["SolidFire Active IQ (Anmeldung erforderlich)"^] So überwachen Sie Cluster-Kapazität und -Performance:
+
+* link:task-active-iq-all-clusters-view-overview.html["Ansicht „Alle Cluster“"]
+* link:task-active-iq-select-cluster-overview.html["Wählen Sie einen Cluster aus"]
+* link:task-active-iq-nodes.html["Knoten"]
+* link:task_active_iq_drives.html["Laufwerke"]
+* link:task_active_iq_volumes_overview.html["Volumes"]
+* link:task_active_iq_replication.html["Replizierung"]
+* link:task-active-iq-virtual-volumes.html["Virtual Volumes"]
+* link:task-active-iq-qos-management-overview.html["QoS-Management"]
+* link:task-active-iq-virtual-machines.html["Virtual Machines (nur NetApp HCI Cluster)"]
+* link:task-active-iq-vmware-alarms.html["VMware Alarme (nur NetApp HCI Cluster)"]
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

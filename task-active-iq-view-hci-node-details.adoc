@@ -1,0 +1,114 @@
+---
+permalink: task-active-iq-view-hci-node-details.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, hci, compute, storage, nodes 
+summary: Informationen zum Anzeigen von NetApp HCI-Node-Details in SolidFire Active IQ. 
+---
+= Zeigen Sie Details zu NetApp HCI Storage- und Computing-Nodes an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Für die NetApp H-Series Nodes, die ein NetApp HCI System umfassen, gibt es zwei Arten: computing- und Storage-Nodes.
+
+Auf der Seite *Nodes* gibt die Informationsleiste einen schnellen Überblick über die folgenden Daten:
+
+* VCenter IP: IP-Adresse des vCenter Servers
+* MVIP: Management der virtuellen IP-Adresse
+* SVIP: Virtuelle Speicher-IP-Adresse
+
+
+
+
+== Zeigt Informationen zu Storage-Nodes an
+
+Wählen Sie *Storage* aus, um die folgenden Informationen über die Speicherknoten im Cluster anzuzeigen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| ID | Vom System generierte ID für den Node: 
+
+
+| Status  a| 
+Der Status des Node:
+
+* Gesund: Der Node weist keine kritischen Fehler auf.
+* Offline: Auf den Node kann nicht zugegriffen werden. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+* Fehler: Diesem Knoten sind Fehler zugeordnet. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+
+
+
+
+| Typ | Zeigt den Modelltyp des Node. 
+
+
+| Chassis/Steckplatz | Dem Chassis und dem Steckplatz des Node ist eine eindeutige Seriennummer zugewiesen. 
+
+
+| Seriennummer | Dem Node zugewiesene eindeutige Seriennummer. 
+
+
+| Version | Version der auf jedem Node ausgeführten Element Software. 
+
+
+| Management-IP | Der Node zugewiesene Management-IP-Adresse für 1-GbE- oder 10-GbE-Netzwerkadministratoraufgaben. 
+
+
+| Storage-IP | Die Speicher-IP-Adresse ist dem Node zugewiesen, der für die iSCSI-Netzwerkerkennung und den gesamten Datenverkehr im Datennetzwerk verwendet wird. 
+
+
+| Rolle  a| 
+Gibt an, welche Rolle der Node im Cluster hat:
+
+* Cluster Master: Der Knoten, der clusterweite administrative Aufgaben ausführt und MVIP und SVIP enthält.
+* Ensemble Node: Ein Knoten, der am Cluster teilnimmt. Je nach Clustergröße gibt es entweder 3 oder 5 Ensemble-Knoten.
+
+
+
+
+| IOPS-Durchschnitt letzte 30 Minuten | Summe der durchschnittlichen IOPS, die in den letzten 30 Minuten für alle Volumes ausgeführt wurden, über die dieser Node als primärer Node verfügt. 
+
+
+| Durchschnittlicher Durchsatz Letzte 30 Minuten | Summe der durchschnittlich ausgeführten Durchsatzraten in den letzten 30 Minuten für alle Volumes mit diesem Node als primäres Volume. 
+
+
+| Durchschnittliche Latenz (µs) Letzte 30 Minuten | Die durchschnittliche Zeit in Mikrosekunden, wie sie über die letzten 30 Minuten gemessen wurde, um Lese- und Schreibvorgänge für alle Volumes abzuschließen, bei denen dieser Node als primärer Wert gilt. Zur Meldung dieser Kennzahl, die auf aktiven Volumes basiert, werden nur Werte ohne Latenz verwendet. 
+|===
+
+
+== Informationen zu Computing-Nodes anzeigen
+
+Wählen Sie *Compute* aus, um die folgenden Informationen zu den Computing-Nodes im Cluster anzuzeigen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| IP | IP-Adresse des Computing-Node. 
+
+
+| VCenter-Status | Der Wert, der sich aus VMware ergibt. Führen Sie den Mauszeiger über dies für die VMware Beschreibung. 
+
+
+| Typ | Zeigt den Modelltyp des Node. 
+
+
+| Chassis/Steckplatz | Dem Chassis und dem Steckplatz des Node ist eine eindeutige Seriennummer zugewiesen. 
+
+
+| Seriennummer | Dem Node zugewiesene eindeutige Seriennummer. 
+
+
+| VMotion IP | Die Netzwerk-IP-Adresse des VMware vMotion Computing-Nodes 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

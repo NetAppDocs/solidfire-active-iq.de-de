@@ -1,0 +1,52 @@
+---
+permalink: concept-active-iq-learn-about-active-iq.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, learn 
+summary: Weitere Informationen zu SolidFire Active IQ 
+---
+= Weitere Informationen zu SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bevor Sie SolidFire Active IQ verwenden, sollten Sie sich dessen bewusst sein, wie SolidFire Active IQ funktioniert und welche Informationen es sammelt.
+
+
+
+== Funktionsweise von SolidFire Active IQ
+
+Services wie Collector und Telemetrie werden auf einem Management-Node ausgeführt. Diese Services werden mit schreibgeschütztem Zugriff auf ein Cluster konfiguriert und ermöglichen so geplante API-Aufrufe für ein Cluster, um wichtige Performance-, Kapazitäts- und Zustandskennzahlen zu erfassen. Diese Informationen werden über HTTPS in die SolidFire Active IQ Cloud-Datenbank hochgeladen. Diese Informationen werden verarbeitet und Ihnen und NetApp Support über die SolidFire Active IQ-Benutzeroberfläche zur Verfügung gestellt. Sie können die aktuellen API-Payloads und Erfassungsintervalle anzeigen, die für einen Cluster in der SolidFire Active IQ-Benutzeroberfläche erhalten wurden, indem Sie sich mit Ihren SSO-Anmeldedaten anmelden und im Dropdown-Menü *Reporting* die Option *API-Sammlung* wählen.
+
+link:https://activeiq.solidfire.com/["Zugriff auf SolidFire Active IQ (Anmeldung erforderlich)"^]
+
+
+
+== Von SolidFire Active IQ gesammelte Informationen
+
+SolidFire Active IQ erfasst Informationen über Volumes, Cluster, Nodes, Performance und Konfigurationen:
+
+* Ressourcen-IDs wie Volume, Snapshots und Konto-Node-IDs
+* Performance- und Kapazitätsdaten für Cluster und Volumes
+* Fehler- und Ereignisprotokoll
+* NetApp HCI und Element Softwareversionen
+* Konfigurationen für Quality of Service (QoS)
+* Volume-Details wie Größe, Erstellungsdatum usw.
+* Volume-Zugriffsgruppen und Sitzungskonfigurationen
+* Node- und Cluster-Netzwerkkonfigurationen
+
+
+Die folgenden vertraulichen Informationen werden von SolidFire Active IQ nicht erfasst:
+
+* Tatsächliche Endbenutzerdaten
+* Passwörter
+* Sicherheitsschlüssel des Challenge-Handshake Authentication Protocol (CHAP)
+* Administrative Cluster-Benutzerinformationen
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

@@ -1,0 +1,115 @@
+---
+permalink: task-active-iq-enable-reporting.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, enable, reporting 
+summary: Erfahren Sie, wie Sie die SolidFire Active IQ-Berichtsfunktionen auf dem Management-Node aktivieren. 
+---
+= Aktivieren von SolidFire Active IQ-Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie müssen die SolidFire Active IQ Reporting-Funktion auf dem Management-Node aktivieren, wenn dies bei der Installation oder Aktualisierung nicht bereits geschehen war, bevor der SolidFire Active IQ-Server die Datenauslastungen für ein Cluster von dem Management-Node erhalten kann. Wenn die Verbindung erfolgreich eingerichtet wurde, sendet das Cluster Informationen an den SolidFire Active IQ-Server. Sie können dann das Cluster in der SolidFire Active IQ-UI anzeigen, in der Cluster-Informationen angezeigt werden.
+
+
+NOTE: Die Browser Google Chrome und Firefox werden für die Ausführung mit SolidFire Active IQ unterstützt.
+
+.Bevor Sie beginnen
+* Einige Funktionen in Active IQ, beispielsweise Quality of Service (QoS), erfordern Element 11.3 oder höher die ordnungsgemäße Funktion. Um sicherzustellen, dass Sie alle Active IQ-Funktionen nutzen können, empfiehlt NetApp Folgendes:
++
+** Im Storage Cluster wird die NetApp Element Software 11.3 oder höher ausgeführt.
+** Sie haben einen Management-Node mit Version 11.3 oder höher implementiert.
+
+
+* Sie haben Internetzugang. Der Active IQ Collector Service kann nicht von dunklen Standorten verwendet werden, die keine externe Verbindung haben.
+
+
+.Schritte
+. Holen Sie sich die Basis-Asset-ID für die Installation:
++
+.. Öffnen Sie die REST API-UI für den Bestandsdienst auf dem Managementknoten:
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. Wählen Sie *autorisieren* aus, und füllen Sie Folgendes aus:
++
+... Geben Sie den Benutzernamen und das Passwort für den Cluster ein.
+... Geben Sie die Client-ID als ein `mnode-client`.
+... Wählen Sie *autorisieren*, um eine Sitzung zu starten.
+... Schließen Sie das Fenster.
+
+
+.. Wählen Sie in DER REST API UI *GET ​/Installations* aus.
+.. Wählen Sie *Probieren Sie es aus*.
+.. Wählen Sie *Ausführen*.
+.. Kopieren Sie aus dem Text Code 200 Antwort den `id` Für die Installation.
++
+[listing, subs="+quotes"]
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
+----
++
+
+NOTE: Die Installation verfügt über eine Basiskonfiguration, die während der Installation oder eines Upgrades erstellt wurde.
+
+
+
+. Telemetrie aktivieren:
++
+.. Rufen Sie die mNode-Service-API-UI auf dem Management-Node auf, indem Sie die Management-Node-IP-Adresse, gefolgt von eingeben `/mnode`:
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+.. Wählen Sie *autorisieren* oder ein Schloss-Symbol aus, und füllen Sie Folgendes aus:
++
+... Geben Sie den Benutzernamen und das Passwort für den Cluster ein.
+... Geben Sie die Client-ID als ein `mnode-client`.
+... Wählen Sie *autorisieren*, um eine Sitzung zu starten.
+... Schließen Sie das Fenster.
+
+
+.. Konfigurieren der BasisinAssets:
++
+... Wählen Sie *PUT /Assets/{Asset_id}* aus.
+... Wählen Sie *Probieren Sie es aus*.
+... Geben Sie die folgende in die JSON-Nutzlast ein:
++
+[listing]
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+... Geben Sie die Basis-ID des vorherigen Schritts in *Asset_ID* ein.
+... Wählen Sie *Ausführen*.
++
+Der Active IQ Service wird automatisch neu gestartet, sobald die Assets geändert werden. Das Ändern von Anlagen führt zu einer kurzen Verzögerung, bevor Einstellungen angewendet werden.
+
+
+
+
+
+
+
+. Melden Sie sich bei an link:https://activeiq.solidfire.com/["SolidFire Active IQ"^] Und bestätigen Sie, dass Sie Ihre Cluster anzeigen können.
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

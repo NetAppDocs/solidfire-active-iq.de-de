@@ -1,0 +1,118 @@
+---
+permalink: task-active-iq-snapshots-and-schedules.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, snapshot, details, schedule 
+summary: Weitere Informationen zum Anzeigen von Snapshot-Details und zum Snapshot-Zeitplan finden Sie in SolidFire Active IQ. 
+---
+= Snapshots und Snapshot Zeitpläne
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Weitere Informationen zur Anzeige von Snapshot- und Snapshot-Zeitplänen:
+
+* 
+*  Schedules
+
+
+
+
+== Snapshots
+
+Auf der Seite *Volumes*, die über das Seitenfeld für einen ausgewählten Cluster verfügbar ist, können Sie Informationen zu Volume-Snapshots anzeigen.
+
+.Schritte
+. Wählen Sie *Bände* > *Snapshots*.
+. Alternativ wählen Sie *Volumes* > *aktive Volumes* und wählen Sie in der Spalte Aktionen die aus image:more_information.PNG["Weitere Informationen"] Symbol für das gewünschte Volumen und wählen Sie *Snapshots anzeigen*.
+. (Optional) Sie können die Snapshot-Liste als CSV-Datei exportieren, indem Sie die auswählen image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+
+In der folgenden Liste werden die verfügbaren Details beschrieben:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| ID | Zeigt die dem Snapshot zugewiesene Snapshot-ID an. 
+
+
+| Volume-ID | ID, die beim Erstellen des Volumes angegeben wurde. 
+
+
+| Konto-ID | ID des Kontos, der dem Volume zugewiesen wurde. 
+
+
+| UUID | Universell eindeutige Kennung. 
+
+
+| Größe | Benutzerdefinierte Größe des Snapshots. 
+
+
+| Volume-Größe | Größe des Volumes, aus dem der Snapshot erstellt wurde. 
+
+
+| Erstellungszeit | Die Zeit, zu der der Snapshot erstellt wurde. 
+
+
+| Bis Aufbewahren | Tag und Uhrzeit des Snapshots werden gelöscht. 
+
+
+| Snapshot-ID der Gruppe | Die Gruppen-ID, zu der der Snapshot gehört, wenn er zusammen mit anderen Volume-Snapshots gruppiert wird. 
+
+
+| Datenreplizierung  a| 
+Zeigt den Status des Snapshots im Remote-Cluster an:
+
+* Vorhanden: Der Snapshot ist auf einem Remote-Cluster vorhanden.
+* Nicht vorhanden: Der Snapshot ist nicht auf einem Remote-Cluster vorhanden.
+* Synchronisierung: Das Ziel-Cluster repliziert derzeit den Snapshot.
+* Gelöscht: Das Ziel hat den Snapshot repliziert und dann gelöscht.
+
+
+|===
+
+
+== Snapshot Zeitpläne
+
+Auf der Seite *Volumes* > *Snapshot Schedules*, die über das Seitenfenster für einen ausgewählten Cluster verfügbar ist, können Sie Details zu Snapshot-Zeitplänen anzeigen.
+
+Sie können die Snapshot-Zeitplanliste als CSV-Datei exportieren, indem Sie die auswählen image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+In der folgenden Liste werden die verfügbaren Details beschrieben:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| ID | Die dem Zeitplan zugewiesene Plan-ID. 
+
+
+| Name | Vom Benutzer zugewiesener Name des Zeitplans. 
+
+
+| Frequenz | Die Häufigkeit, mit der der Zeitplan ausgeführt wird. Die Häufigkeit kann in Stunden und Minuten, Wochen oder Monaten eingestellt werden. 
+
+
+| Wiederkehrend | Gibt an, ob der Zeitplan wiederholt ist oder nicht. 
+
+
+| Volume-IDs | Die Volume-IDs, die im geplanten Snapshot enthalten sind. 
+
+
+| Letzter Lauf | Das letzte Mal, als der Zeitplan ausgeführt wurde. 
+
+
+| Status Der Letzten Ausführung | Das Ergebnis der letzten Planausführung. Mögliche Werte: `Success` Oder `Error` 
+
+
+| Manuell Angehalten | Gibt an, ob der Zeitplan manuell angehalten wurde oder nicht. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

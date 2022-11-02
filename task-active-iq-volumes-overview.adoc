@@ -1,0 +1,26 @@
+---
+permalink: task_active_iq_volumes_overview.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, volumes, cluster 
+summary: Erfahren Sie mehr über die Seite Volumes in SolidFire Active IQ. 
+---
+= Volumes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *Volumes*, die über das Seitenfenster für einen ausgewählten Cluster verfügbar ist, können Sie Informationen zu Volumes anzeigen, die auf dem Cluster bereitgestellt werden. Jede Kategorie von Volume-Informationen wird entweder im Tabellenformat oder als Grafik dargestellt.
+
+Erfahren Sie, was auf der Seite *Bände* angezeigt wird:
+
+* link:task-active-iq-active-volumes.html["Aktive Volumes"]
+* link:task-active-iq-snapshots-and-schedules.html["Snapshots und Snapshot Zeitpläne"]
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

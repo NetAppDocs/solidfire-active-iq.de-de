@@ -1,0 +1,41 @@
+---
+permalink: task-active-iq-capacity-licensing.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, capacity, licensing 
+summary: Erfahren Sie mehr über die Seite Kapazitätslizenzierung in SolidFire Active IQ. 
+---
+= Kapazitätslizenzierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *Kapazitätslizenzierung* von *Alle Cluster View* können Sie Informationen zum NetApp Kapazitätslizenzmodell anzeigen. Kunden, die Standard SolidFire Appliances verwenden, sollten diese Seite nicht ignorieren.
+
+Die Kapazitätslizenzierung ist eine von NetApp erhältliche alternative Lizenzoption. Hier finden Sie Informationen zu Aufgaben, die mit der Kapazitätslizenzierung in Verbindung stehen:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Poolname | Name des Kunden, der der Lizenz zugeordnet ist. 
+
+
+| Zustehende Kapazität | Summe der erworbenen Softwarelizenzen. 
+
+
+| Bereitgestellte Kapazität | Menge der zugewiesenen Kapazität auf allen kapazitätslizenzierten Nodes in einer Kundenumgebung. 
+
+
+| Genutzte Kapazität | Aktuell genutzte Kapazität von allen Clustern in einem Cluster-Pool. 
+
+
+| Cluster | Anzahl der Cluster und ihre IDs, die einen Cluster-Pool für eine Lizenz bilden. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

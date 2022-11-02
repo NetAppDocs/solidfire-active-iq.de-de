@@ -1,0 +1,99 @@
+---
+settings:
+  name: SolidFire Active IQ
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: de-de,us-en,ja-jp,zh-cn,zh-tw,ko-kr,fr-fr
+sidebar:
+  entries:
+  - title: NetApp SolidFire Active IQ
+    url: "/index.html"
+  - title: Legen Sie los – mit SolidFire Active IQ
+    entries:
+    - title: Überblick
+      url: "/task-active-iq-get-started-overview.html"
+    - title: Weitere Informationen zu SolidFire Active IQ
+      url: "/concept-active-iq-learn-about-active-iq.html"
+    - title: Aktivieren von SolidFire Active IQ-Berichten
+      url: "/task-active-iq-enable-reporting.html"
+    - title: Verwenden Sie die SolidFire Active IQ-Benutzeroberfläche
+      url: "/task-active-iq-use-the-user-interface.html"
+  - title: Managen Sie SolidFire Active IQ
+    entries:
+    - title: Überblick
+      url: "/task-active-iq-manage-overview.html"
+    - title: Ansicht „Alle Cluster“
+      entries:
+      - title: Überblick
+        url: "/task-active-iq-all-clusters-view-overview.html"
+      - title: Dashboard mit der Ansicht „Alle Cluster“
+        url: "/task-active-iq-all-clusters-view-dashboard.html"
+      - title: Meldungen
+        url: "/task-active-iq-alerts.html"
+      - title: Kapazitätslizenzierung
+        url: "/task-active-iq-capacity-licensing.html"
+      - title: Terminkapazität
+        url: "/task-active-iq-term-capacity.html"
+    - title: Wählen Sie ein Cluster aus
+      entries:
+      - title: Überblick
+        url: "/task-active-iq-select-cluster-overview.html"
+      - title: Dashboard mit einer einzigen Cluster-Ansicht
+        url: "/task-active-iq-single-cluster-view-dashboard.html"
+      - title: Berichterstellung
+        url: "/task-active-iq-reporting-options.html"
+    - title: Knoten
+      url: "/task-active-iq-nodes.html"
+    - title: Laufwerke
+      url: "/task_active_iq_drives.html"
+    - title: Volumes
+      entries:
+      - title: Überblick
+        url: "/task_active_iq_volumes_overview.html"
+      - title: Aktive Volumes
+        url: "/task-active-iq-active-volumes.html"
+      - title: Snapshots und Snapshot Zeitpläne
+        url: "/task-active-iq-snapshots-and-schedules.html"
+    - title: Replizierung
+      url: "/task_active_iq_replication.html"
+    - title: Virtual Volumes
+      url: "/task-active-iq-virtual-volumes.html"
+    - title: QoS-Management
+      entries:
+      - title: Überblick
+        url: "/task-active-iq-qos-management-overview.html"
+      - title: Empfehlungen
+        url: "/task-active-iq-recommendations.html"
+      - title: Knotendrosselung
+        url: "/task-active-iq-throttling.html"
+    - title: Virtual Machines
+      url: "/task-active-iq-virtual-machines.html"
+    - title: VMware Alarme
+      url: "/task-active-iq-vmware-alarms.html"
+  - title: Fehlerbehebung und Support
+    url: "/task-active-iq-troubleshoot-support.html"
+homepage:
+  tiles:
+  - title: Verwenden Sie das Tool SolidFire Active IQ
+    links:
+    - title: Los geht's
+      url: "/task-active-iq-get-started-overview.html"
+    - title: Managen Sie SolidFire Active IQ
+      url: "/task-active-iq-manage-overview.html"
+  - title: Produktdokumentation
+    links:
+    - title: SolidFire und Element Software
+      url: https://docs.netapp.com/us-en/element-software/index.html
+    - title: NetApp HCI
+      url: https://docs.netapp.com/us-en/hci/index.html
+    - title: NetApp Produktdokumentation
+      url: https://www.netapp.com/support-and-training/documentation
+  - title: Fehlerbehebung
+    links:
+    - title: Fehlerbehebung
+      url: "/task-active-iq-troubleshoot-support.html"
+    - title: Wenden Sie sich an den technischen Support
+      url: https://mysupport.netapp.com/site/global/dashboard

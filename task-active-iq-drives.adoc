@@ -1,0 +1,55 @@
+---
+permalink: task_active_iq_drives.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, drives 
+summary: Erfahren Sie mehr über die Seite Laufwerke in SolidFire Active IQ. 
+---
+= Laufwerke
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Jeder Node enthält mindestens ein physisches Laufwerk, das zum Speichern eines Teils der Daten für das Cluster verwendet wird. Das Cluster verwendet die Kapazität und Performance des Laufwerks, nachdem das Laufwerk erfolgreich zu einem Cluster hinzugefügt wurde.
+
+Auf der Seite *Drives*, die über das Seitenfeld für einen ausgewählten Cluster verfügbar ist, können Sie die Seite filtern, indem Sie auf den Registerkarten *aktiv*, *verfügbar* und *fehlgeschlagen* klicken.
+
+Je nach Status der Laufwerksfunktionen sind die folgenden Informationen für jedes Laufwerk im Cluster verfügbar:
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Laufwerks-ID | Dem Laufwerk zugewiesene sequenzielle Nummer. 
+
+
+| Node-ID | Zugewiesene Node-Nummer, wenn der Node dem Cluster hinzugefügt wird. 
+
+
+| Service-ID | Die aktuelle Service-ID des Block- oder Schichtdienstes, der mit dem Laufwerk verknüpft ist. 
+
+
+| Schlitz | Steckplatznummer, in dem sich das Laufwerk befindet. 
+
+
+| Kapazität | Gigabyte-Größe des Laufwerks. 
+
+
+| Die Firmware-Version | Version der Firmware auf dem Laufwerk. 
+
+
+| Seriell | Die Seriennummer der SSD. 
+
+
+| Verschleiß | Anzeige des verbleibenden Abriebes. 
+
+
+| Typ | Als Festplattentyp können Block- oder Metadaten durchgeführt werden. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

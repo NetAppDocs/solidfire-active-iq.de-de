@@ -1,0 +1,26 @@
+---
+permalink: task-active-iq-qos-management-overview.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes 
+summary: Erfahren Sie mehr über die Seite zum QoS-Management in SolidFire Active IQ. 
+---
+= QoS-Management
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *QoS Management*, die über das Seitenfenster für ein ausgewähltes Cluster verfügbar ist, können Sie Informationen zu QoS-Empfehlungen und Drosselung für die Knoten in einem Cluster anzeigen.
+
+Erfahren Sie, wie Sie Informationen zu QoS-Empfehlungen und zur Drosselung für einen ausgewählten Node anzeigen:
+
+* link:task-active-iq-recommendations.html["Empfehlungen"]
+* link:task-active-iq-throttling.html["Knotendrosselung"]
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

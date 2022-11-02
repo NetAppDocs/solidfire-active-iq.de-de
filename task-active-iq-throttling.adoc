@@ -1,0 +1,58 @@
+---
+permalink: task-active-iq-throttling.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, throttling 
+summary: Erfahren Sie mehr über die Seite Knotendrosselung in SolidFire Active IQ. 
+---
+= Knotendrosselung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *QoS Management* > *Node Drosseling*, die im Seitenbereich für einen ausgewählten Cluster verfügbar ist, können Sie die prozentuale Drosselung für die Knoten im Cluster anzeigen. Die Knoten werden auf der linken Seite des Displays als Miniaturansicht-Layouts aufgelistet und werden abhängig vom Grad der Drosselung für einen ausgewählten Zeitraum bestellt.
+
+Erfahren Sie mehr über das Anzeigen von Informationen zur Knotendrosselung:
+
+*  graphs and select date ranges
+*  node throttling data
+
+
+
+
+== Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus
+
+Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich alle Diagramme auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage.
+
+Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Darüber hinaus können Sie ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten gelangen. Sie können zwischen den Diagrammen wechseln, indem Sie die Miniaturansichten auf der linken Seite auswählen.
+
+Die Diagramme zeigen die Node-Drosselung über den ausgewählten Zeitraum basierend auf den Mindest- und Höchstwerten für die auf dem ausgewählten Node gehosteten Volumes an. Die Farbe stellt die Menge der Drosselung dar: Grün (keine), gelb (begrenzt) oder rot (hoch). Weitere Informationen finden Sie im folgenden Diagramm-Beispiel:
+
+.Erweitern Sie das Diagramm-Beispiel
+====
+image:node_throttling_range.PNG["Diagramm zur Knotendrosselung"]
+
+====
+Positionieren Sie den Mauszeiger an einem beliebigen Punkt im Diagramm, um zu den Point-in-Time-Details zu sehen.
+
+link:task-active-iq-qos-recommendations.html["Hier finden Sie QoS-Empfehlungen für einen Cluster"].
+
+
+NOTE: Auf der Seite Node Throttling können Sie feststellen, ob QoS-Pushback in einem Storage-Cluster vorhanden ist. Sehen Sie hierzu https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_check_for_QoS_pushback_in_Element_Software["KB-Artikel"^] Zur Information.
+
+
+
+== Exportieren der Knotendrosselung von Daten
+
+Sie können Diagrammdaten in ein CSV-Format (kommagetrennte Werte) exportieren. Nur die im Diagramm angezeigten Informationen werden exportiert.
+
+.Schritte
+. Wählen Sie in einer Listenansicht oder Grafik die aus image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

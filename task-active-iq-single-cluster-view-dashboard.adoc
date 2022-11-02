@@ -1,0 +1,122 @@
+---
+permalink: task-active-iq-single-cluster-view-dashboard.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, dashboard, single, cluster 
+summary: Informationen über die Dashboard-Seite für ein ausgewähltes Cluster in SolidFire Active IQ. 
+---
+= Dashboard mit einer einzigen Cluster-Ansicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *Dashboard* für einen ausgewählten Cluster können Sie grundlegende Cluster-Details anzeigen, einschließlich Performance, Kapazität und Computing-Auslastung.
+
+Wählen Sie das Dropdown-Menü *Details anzeigen* aus, um weitere Informationen zum Cluster anzuzeigen, oder wählen Sie das aus image:more_details.PNG["Weitere Informationen"] Symbol neben einer Überschrift für detaillierte Berichtsinformationen. Sie können den Mauszeiger auch über Diagrammlinien und Berichtsdaten bewegen, um zusätzliche Details anzuzeigen.
+
+Die verfügbaren Details variieren je nach System:
+
+*  system
+*  HCI system overview
+
+
+
+
+== Reine Storage-Systeme
+
+Bei einer speicherbasierten Lösung von SolidFire können Sie Details und Leistungsinformationen für Ihr Cluster anzeigen, wenn Sie auf der Seite *Dashboard* auf *Details anzeigen* klicken.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Informationsleiste | Diese obere Leiste bietet eine schnelle Übersicht über den aktuellen Status des ausgewählten Clusters. Der Balken zeigt die Anzahl der Nodes, die Anzahl der Volumes, Fehlerdetails, Echtzeitstatistiken zum Effizienzstatus und den Status der Block- und der Metadaten-Kapazität an. Links von diesem Balken öffnen sich zu den entsprechenden Daten in der UI. 
+
+
+| Cluster-Details  a| 
+Erweitern Sie die Informationsleiste, indem Sie *Details anzeigen* auswählen, um diese Werte anzuzeigen:
+
+* Element Version
+* ISCSI-Sitzungen
+* Fibre Channel-Sitzungen
+* Insgesamt maximal konfigurierte IOPS
+* Maximale IOPS insgesamt
+* Node-Typen
+* Verschlüsselung für Daten im Ruhezustand
+* Vvols
+* Konfigurierte IOPS insgesamt Min
+
+
+
+
+| Leistung | Dieses Diagramm zeigt die IOPS- und Durchsatzauslastung. 
+
+
+| Kapazität  a| 
+Hier werden der Systemzustand und die Fülle des Installationsclusters angezeigt:
+
+* Bereitgestellt: Die Gesamtkapazität aller auf dem System erstellten Volumes.
+* Physisch: Die physische Gesamtkapazität (Blockdatenkapazität) auf dem System für die Speicherung von Daten (nach Anwendung aller Effizienzfunktionen)
+* Block-Kapazität: Die Menge an aktuell genutzten Block-Datenkapazität.
+* Metadaten-Kapazität: Die Menge der derzeit genutzten Metadaten-Kapazität.
+* Effizienz: Die Effizienz, die das System durch Komprimierung, Deduplizierung und Thin Provisioning bietet, ist deutlich erhöht.
+
+
+|===
+
+
+== NetApp HCI Systemübersicht
+
+Bei einer auf NetApp HCI basierenden Lösung können Sie die Details und Performance-Informationen Ihres Clusters anzeigen, wenn Sie auf der Seite *Dashboard* auf *Details anzeigen* klicken.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Informationsleiste | Diese obere Leiste bietet eine schnelle Übersicht über den aktuellen Status des ausgewählten Clusters. Die Leiste zeigt die Anzahl der Computing- und Storage-Nodes, den Computing-Status, den Storage-Status, die Anzahl der Virtual Machines und die Anzahl der Volumes an, die mit dem NetApp HCI System verbunden sind. Links von diesem Balken öffnen sich zu den entsprechenden Daten in der UI. 
+
+
+| Installationsdetails  a| 
+Erweitern Sie die Informationsleiste, indem Sie *Details anzeigen* auswählen, um diese Werte anzuzeigen:
+
+* Element Version
+* Hypervisor
+* Zugeordnete vCenter Instanz
+* Verbundener Datacenter
+* Insgesamt maximal konfigurierte IOPS
+* Maximale IOPS insgesamt
+* Computing-Node-Typen
+* Typen Von Storage-Nodes
+* Verschlüsselung für Daten im Ruhezustand
+* Vvols
+* ISCSI-Sitzungen
+* Konfigurierte IOPS insgesamt Min
+
+
+
+
+| Computing-Auslastung | In dieser Grafik wird die CPU- und Arbeitsspeicherauslastung dargestellt. 
+
+
+| Storage-Kapazität  a| 
+Hier werden der Systemzustand und die Fülle des Installationsclusters angezeigt:
+
+* Bereitgestellt: Die Gesamtkapazität aller auf dem System erstellten Volumes.
+* Physisch: Die physische Gesamtkapazität (Blockdatenkapazität) auf dem System für die Speicherung von Daten (nach Anwendung aller Effizienzfunktionen)
+* Block-Kapazität: Die Menge an aktuell genutzten Block-Datenkapazität.
+* Metadaten-Kapazität: Die Menge der derzeit genutzten Metadaten-Kapazität.
+* Effizienz: Die Effizienz, die das System durch Komprimierung, Deduplizierung und Thin Provisioning bietet, ist deutlich erhöht.
+
+
+
+
+| Storage Performance | IOPS und Durchsatz werden in diesem Diagramm dargestellt. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]
