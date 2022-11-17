@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head class="at-element-marker">
+  <title>Meldungen</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Meldungen" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/de-de/solidfire-active-iq/task-active-iq-alerts.html" />
+	<meta property="og:description" content="Hier finden Sie Informationen zu Aufgaben im Zusammenhang mit Warnmeldungen in SolidFire Active IQ." />
+  <meta property="og:image" content="https://docs.netapp.com/de-de/solidfire-active-iq/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Hier finden Sie Informationen zu Aufgaben im Zusammenhang mit Warnmeldungen in SolidFire Active IQ.">
+  <meta name="keywords" content=" solidfire, active, iq, alerts"><!-- Icons -->
+  <link rel="icon" href="/de-de/solidfire-active-iq/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/de-de/solidfire-active-iq/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/de-de/solidfire-active-iq/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/de-de/solidfire-active-iq/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/de-de/solidfire-active-iq/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/de-de/solidfire-active-iq/js/na-search.js'></script><script src='/de-de/solidfire-active-iq/js/na-pagenav.js'></script><script src='/de-de/solidfire-active-iq/js/na-utility.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/clouddocs.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/de-de/solidfire-active-iq/js/toc.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/de-de/solidfire-active-iq"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/de-de/solidfire-active-iq/js/custom-dropdown.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/FileSaver.min.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/jszip-utils.min.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/jszip.min.js'></script>
+  <script src='/de-de/solidfire-active-iq/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/solidfire-active-iq/issues/new?body=Page%3A%20[Meldungen](https://docs.netapp.com/de-de/solidfire-active-iq/task-active-iq-alerts.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/de-de/solidfire-active-iq/images/discuss-sm.svg" alt="" class="github-icon" />Dokumentationsänderungen beantragen</a><a target="_blank" href="https://github.com/NetAppDocs/solidfire-active-iq/blob/main/task-active-iq-alerts.adoc" class="page-nav-contribute-link" role="button"><img src="/de-de/solidfire-active-iq/images/edit-sm.svg" alt="" class="github-icon" />In GitHub bearbeiten</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/de-de/solidfire-active-iq/images/article-sm.svg" alt="" class="github-icon" />Leitfaden für Beitragende</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">AUF DIESER SEITE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Produkt und Lösungen</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support und Schulung</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Kundenberichte</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/de-de/solidfire-active-iq/search.html"
+          data-type="widget" 
+          data-placeholder="Dokumentation durchsuchen"
+          data-no-results-found="Keine Ergebnisse für {query} gefunden"
+          data-did-you-mean="Nach {suggestion} suchen."
+          data-no-results-found-did-you-mean="Keine Ergebnisse für {query} gefunden. Meinten Sie {suggestion}?"
+          data-results-found="{hitCount} Ergebnisse gefunden"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Deutsch</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/de-de/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/solidfire-active-iq/task-active-iq-alerts.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/de-de/solidfire-active-iq/images/collapse.png" alt="Navigationsbereich reduzieren"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>verfügbare PDFs<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/de-de/solidfire-active-iq/pdfs/fullsite-sidebar/NetApp_SolidFire_Active_IQ.pdf" >
+          <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>PDF dieser Dokumentationsseite</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/Legen_Sie_los___mit_SolidFire_Active_IQ.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            Legen Sie los – mit SolidFire Active IQ
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/Managen_Sie_SolidFire_Active_IQ.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            Managen Sie SolidFire Active IQ
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/Ansicht__Alle_Cluster_.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            Ansicht „Alle Cluster“
+          </a>
+          
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/Wählen_Sie_ein_Cluster_aus.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            Wählen Sie ein Cluster aus
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/Volumes.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            Volumes
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/de-de/solidfire-active-iq/pdfs/sidebar/QoS_Management.pdf" 
+            
+          >
+            <img src="/de-de/solidfire-active-iq/images/pdf.png" alt="" width="16" height="16"/>
+            QoS-Management
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/de-de/solidfire-active-iq/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Sammlung separater PDF-Dokumente<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SolidFire Active IQ"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/index.html">
+        NetApp SolidFire Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Legen Sie los – mit SolidFire Active IQ"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Legen Sie los – mit SolidFire Active IQ</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-get-started-overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Weitere Informationen zu SolidFire Active IQ"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/concept-active-iq-learn-about-active-iq.html">
+        Weitere Informationen zu SolidFire Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aktivieren von SolidFire Active IQ-Berichten"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-enable-reporting.html">
+        Aktivieren von SolidFire Active IQ-Berichten
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verwenden Sie die SolidFire Active IQ-Benutzeroberfläche"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-use-the-user-interface.html">
+        Verwenden Sie die SolidFire Active IQ-Benutzeroberfläche
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Managen Sie SolidFire Active IQ"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Managen Sie SolidFire Active IQ</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-manage-overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ansicht „Alle Cluster“"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Ansicht „Alle Cluster“</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-all-clusters-view-overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard mit der Ansicht „Alle Cluster“"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-all-clusters-view-dashboard.html">
+        Dashboard mit der Ansicht „Alle Cluster“
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Meldungen"
+      data-li-level="3#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-alerts.html">
+        Meldungen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Kapazitätslizenzierung"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-capacity-licensing.html">
+        Kapazitätslizenzierung
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Terminkapazität"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-term-capacity.html">
+        Terminkapazität
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Wählen Sie ein Cluster aus"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Wählen Sie ein Cluster aus</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-select-cluster-overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dashboard mit einer einzigen Cluster-Ansicht"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-single-cluster-view-dashboard.html">
+        Dashboard mit einer einzigen Cluster-Ansicht
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Berichterstellung"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-reporting-options.html">
+        Berichterstellung
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Knoten"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-nodes.html">
+        Knoten
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Laufwerke"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task_active_iq_drives.html">
+        Laufwerke
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volumes"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Volumes</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task_active_iq_volumes_overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aktive Volumes"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-active-volumes.html">
+        Aktive Volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Snapshots und Snapshot Zeitpläne"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-snapshots-and-schedules.html">
+        Snapshots und Snapshot Zeitpläne
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Replizierung"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task_active_iq_replication.html">
+        Replizierung
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtual Volumes"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-virtual-volumes.html">
+        Virtual Volumes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="QoS-Management"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> QoS-Management</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Überblick"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-qos-management-overview.html">
+        Überblick
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Empfehlungen"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-recommendations.html">
+        Empfehlungen
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Knotendrosselung"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-throttling.html">
+        Knotendrosselung
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtual Machines"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-virtual-machines.html">
+        Virtual Machines
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware Alarme"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-vmware-alarms.html">
+        VMware Alarme
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Fehlerbehebung und Support"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/solidfire-active-iq/task-active-iq-troubleshoot-support.html">
+        Fehlerbehebung und Support
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/de-de/solidfire-active-iq/images/expand.png" alt="Navigationsbereich erweitern"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/de-de/solidfire-active-iq/">SolidFire&nbsp;Active&nbsp;IQ</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> Die deutsche Sprachversion wurde als Serviceleistung für Sie durch maschinelle Übersetzung erstellt. Bei eventuellen Unstimmigkeiten hat die englische Sprachversion Vorrang. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Meldungen</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-11-17 06:03:07 +0000">11/17/2022</time>
+    
+  
+
+<span>Beitragende
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Über das Dropdown-Menü <strong>Alerts</strong> in <strong>Alle Cluster View</strong> können Sie den Warnungsverlauf anzeigen, Alarmrichtlinien erstellen und verwalten sowie Cluster-Benachrichtigungen anzeigen und unterdrücken.</p>
+</div>
+<div class="paragraph">
+<p>Informationen zu Aufgaben mit Warnmeldungen oder Durchführung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>alerts history</p>
+</li>
+<li>
+<p>history details</p>
+</li>
+<li>
+<p>alert policies</p>
+</li>
+<li>
+<p>,Erstellen einer Meldungsrichtlinie</p>
+</li>
+<li>
+<p>,Meldungsrichtlinientypen</p>
+</li>
+<li>
+<p>an alert policy</p>
+</li>
+<li>
+<p>an alert policy</p>
+</li>
+<li>
+<p>suppressed clusters</p>
+</li>
+<li>
+<p>cluster notifications</p>
+</li>
+<li>
+<p>cluster suppression from a cluster</p>
+</li>
+<li>
+<p>notification email</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="anzeigen-des-alarmverlaufs">Anzeigen des Alarmverlaufs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können den Verlauf für ungelöste oder gelöste Warnmeldungen anzeigen.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Wählen Sie <strong>Alarme</strong> &gt; <strong>Verlauf</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie entweder die Registerkarte <strong>nicht aufgelöst</strong> oder <strong>aufgelöst</strong> aus, um den Verlauf der Warnmeldungen für den Cluster anzuzeigen.</p>
+</li>
+<li>
+<p>(Optional) Wählen Sie die aus <span class="image"><img src="./media/export_button.PNG" alt="Schaltfläche Exportieren"></span> Symbol zum Exportieren der Daten in eine CSV-Datei.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="details-zum-alarmverlauf">Details zum Alarmverlauf</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf der Seite <strong>Verlauf</strong> im Dropdown-Menü Warnungen in der Ansicht Alle Cluster werden bis zu 10000 Einträge des Alarmverlaufs angezeigt, einschließlich aller ungelösten Warnmeldungen und Alarme, die in den letzten 30 Tagen behoben wurden.</p>
+</div>
+<div class="paragraph">
+<p>In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung stehen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Überschrift</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alarm-ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eindeutige ID für jede Warnmeldung.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ausgelöst</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Zeit, zu der die Meldung in SolidFire Active IQ ausgelöst wurde, nicht im Cluster selbst.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Letzte Benachrichtigung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Zeit, zu der die letzte Alarm-E-Mail gesendet wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behoben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeigt an, ob die Ursache der Warnmeldung behoben wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auflösungszeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Zeitpunkt, an dem ein Problem behoben wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Richtlinie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dies ist der benutzerdefinierte Name der Meldungsrichtlinie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schweregrad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Schweregrad, der zum Zeitpunkt der Erstellung der Meldungsrichtlinie zugewiesen wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die E-Mail-Adresse oder Adressen, die für den Empfang der E-Mail-Benachrichtigung ausgewählt wurden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Kunden, der der Meldung zugeordnet ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeigt den Cluster-Namen an, dessen Meldungsrichtlinie hinzugefügt wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trigger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die benutzerdefinierte Einstellung, die die Warnung ausgelöst hat.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="anzeigen-von-meldungsrichtlinien">Anzeigen von Meldungsrichtlinien</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf der Seite <strong>Richtlinien</strong> im Dropdown-Menü <strong>Alarme</strong> in <strong>Alle Cluster-Ansicht</strong> werden die folgenden Richtlinieninformationen für alle Cluster angezeigt.</p>
+</div>
+<div class="paragraph">
+<p>In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung stehen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Überschrift</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name Der Richtlinie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Benutzerdefinierter Name der Meldungsrichtlinie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-Mail-Adresse, die in der Meldungsrichtlinie definiert wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schweregrad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der in der Meldungsrichtlinie zugewiesene Schweregrad.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anzahl und Name jedes in der Meldungsrichtlinie definierten Clusters. Wählen Sie das Informationssymbol aus, um die zugeordneten Cluster anzuzeigen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zustand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Benutzerdefinierte Einstellung für den Zeitpunkt, zu dem eine Warnung ausgelöst werden soll.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unterdrückungstypen</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Legt fest, welche Warnmeldungen und Ereignisse unterdrückt werden. Folgende Typen sind möglich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Voll</strong>: Alle Warnungen für den Cluster werden für die angegebene Dauer unterdrückt. Es werden keine Support-Cases oder E-Mail-Benachrichtigungen generiert.</p>
+</li>
+<li>
+<p><strong>Upgrades</strong>: Nicht kritische Cluster-Warnungen werden für die angegebene Dauer unterdrückt. Kritische Warnungen generieren weiterhin Support-Fälle und E-Mails.</p>
+</li>
+<li>
+<p><strong>Computing</strong>: Warnungen, die von VMware auf den Computing-Nodes ausgelöst werden, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>NodeHardware</strong>: Warnungen, die mit der Knotenwartung verbunden sind, werden unterdrückt. Beispielsweise lassen sich Laufwerke austauschen oder Nodes offline schalten.</p>
+</li>
+<li>
+<p><strong>Laufwerk</strong>: Warnungen, die mit dem Laufwerkszustand verbunden sind, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>Netzwerk</strong>: Warnungen, die mit der Netzwerkkonfiguration und dem Zustand verbunden sind, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>Leistung</strong>: Stromredundanz-Warnungen werden unterdrückt. Es unterdrückt keine <em>nodeOffline</em> Warnung, die bei einem totalen Stromausfall auftreten würde.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktionen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wählen Sie das vertikale Dropdown-Menü für Optionen zum Bearbeiten und Löschen der ausgewählten Richtlinie aus.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="erstellen-einer-meldungsrichtlinie">Erstellen einer Meldungsrichtlinie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können eine Meldungsrichtlinie erstellen, um Informationen aus der <strong>Alle Cluster-Ansicht</strong> in SolidFire Active IQ zu überwachen. Mithilfe von Warnrichtlinien können Sie bei einem oder mehreren Clustern innerhalb einer Installation über Status- oder Performance-Ereignisse benachrichtigt werden, sodass vor oder als Reaktion auf ein schwerwiegendes Ereignis Maßnahmen ergriffen werden können.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Wählen Sie <strong>Alarme</strong> &gt; <strong>Richtlinien</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Create Policy</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie einen Alarmtyp aus der Liste <strong>Richtlinientyp</strong> aus. Siehe ,Meldungsrichtlinientypen.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Im Dialogfeld <strong>Create Policy</strong> gibt es je nach gewähltem Richtlinientyp weitere Policy-spezifische Felder.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Geben Sie einen Namen für die neue Meldungsrichtlinie ein.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Meldungsrichtlinien-Namen sollten die Bedingung beschreiben, für die die Meldung erstellt wird. Beschreibende Titel helfen bei der einfachen Identifikation der Warnmeldung. Namen von Meldungsrichtlinien werden an anderer Stelle im System als Referenz angezeigt.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Wählen Sie einen Schweregrad aus.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/tip.svg" alt="Hinweis">
+</td>
+<td class="content">
+Die Schweregrade der Alarmrichtlinie sind farblich codiert und können leicht von der Seite <strong>Alerts</strong> &gt; <strong>Historie</strong> gefiltert werden.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Bestimmen Sie die Art der Unterdrückung für die Alarmrichtlinie, indem Sie einen Typ aus <strong>supporsible Types</strong> auswählen. Sie können mehrere Typen auswählen.</p>
+<div class="paragraph">
+<p>Bestätigen Sie, dass die Assoziationen Sinn ergeben. Sie haben z. B. für eine Netzwerkwarnrichtlinie <strong>Network Suppression</strong> ausgewählt.</p>
+</div>
+</li>
+<li>
+<p>Wählen Sie ein oder mehrere Cluster aus, die in die Richtlinie einbezogen werden sollen.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/caution.svg" alt="Achtung">
+</td>
+<td class="content">
+Wenn Sie der Installation nach dem Erstellen der Richtlinie ein neues Cluster hinzufügen, wird das Cluster nicht automatisch zu vorhandenen Warnrichtlinien hinzugefügt. Sie müssen eine vorhandene Meldungsrichtlinie bearbeiten und den neuen Cluster auswählen, der der Richtlinie zugeordnet werden soll.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Geben Sie eine oder mehrere E-Mail-Adressen ein, an die Benachrichtigungen gesendet werden. Wenn Sie mehrere Adressen eingeben, müssen Sie die einzelnen Adressen mit einem Komma trennen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Warnhinweise Speichern</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="meldungsrichtlinientypen">Meldungsrichtlinientypen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können Alarmrichtlinien basierend auf den verfügbaren Richtlinientypen erstellen, die im Dialogfeld <strong>Richtlinie erstellen</strong> über <strong>Alarme</strong> &gt; <strong>Richtlinien</strong> aufgeführt sind.</p>
+</div>
+<div class="paragraph">
+<p>Zu den verfügbaren Richtlinienalarme gehören die folgenden Typen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Richtlinientyp</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster-Fehler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein bestimmter Typ oder ein beliebiger Typ von Cluster-Fehler auftritt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ereignis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein bestimmter Ereignistyp eintritt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ausgefallenes Laufwerk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein Laufwerksausfall auftritt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verfügbares Laufwerk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein Laufwerk im Status „<em>available</em>“ online geschaltet wird.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster-Auslastung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn die verwendete Cluster-Kapazität und -Performance mehr als der angegebene Prozentsatz ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nutzbarer Speicherplatz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn der nutzbare Cluster-Speicherplatz unter einem angegebenen Prozentsatz liegt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorstellbare Fläche</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn der bereitstellbare Cluster-Speicherplatz kleiner als ein angegebener Prozentsatz ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collector Not Reporting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn der Collector für SolidFire Active IQ, der auf dem Management-Node ausgeführt wird, während der angegebenen Dauer keine Daten an SolidFire Active IQ sendet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Laufwerksabnutzung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein Laufwerk in einem Cluster weniger als einen bestimmten Prozentsatz des verbleibenden Abnutzung oder des verbleibenden Speicherplatzes aufweist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISCSI-Sitzungen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn die Anzahl aktiver iSCSI-Sitzungen größer als der angegebene Wert ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ausfallsicherheit Im Chassis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn der verwendete Speicherplatz eines Clusters größer als ein vom Benutzer angegebener Prozentsatz ist. Wählen Sie einen Prozentsatz aus, der ausreichend ist, um einen frühzeitigen Hinweis zu erhalten, bevor Sie den Schwellenwert für die Cluster-Stabilität erreichen. Nachdem ein Cluster diesen Schwellenwert erreicht hat, kann es bei einem Ausfall auf Chassis-Ebene nicht mehr automatisch repariert werden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VMware Alarm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sendet eine Benachrichtigung, wenn ein VMware Alarm ausgelöst und an SolidFire Active IQ gemeldet wird.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ausfallsicherheit Individueller Schutzdomänen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wenn der verwendete Speicherplatz den angegebenen Prozentsatz des Schwellenwerts für die Ausfallsicherheit der benutzerdefinierten Schutzdomäne überschreitet, sendet das System eine Benachrichtigung. Wenn dieser Prozentsatz 100 erreicht ist, verfügt das Storage-Cluster nicht über genügend freie Kapazität, um sich nach dem Ausfall einer benutzerdefinierten Sicherungsdomäne selbst zu heilen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Knoten Kern / Crash-Dump-Dateien</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wenn ein Service nicht mehr reagiert und neu gestartet werden muss, erstellt das System eine Core-Datei oder eine Absturz-Dump-Datei und sendet eine Benachrichtigung. Dies ist nicht das erwartete Verhalten während des normalen Betriebs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bearbeiten-einer-meldungsrichtlinie">Bearbeiten einer Meldungsrichtlinie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können eine Meldungsrichtlinie bearbeiten, um Cluster zu einer Richtlinie hinzuzufügen oder aus einer Richtlinie zu entfernen oder zusätzliche Richtlinieneinstellungen zu ändern.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Wählen Sie <strong>Alarme</strong> &gt; <strong>Richtlinien</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie das Menü aus, um weitere Optionen unter <strong>Aktionen</strong> anzuzeigen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Richtlinie Bearbeiten</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Der Richtlinientyp und die type-spezifischen Überwachungskriterien können nicht bearbeitet werden.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>(Optional) Geben Sie einen überarbeiteten Namen für die neue Meldungsrichtlinie ein.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Meldungsrichtlinien-Namen sollten die Bedingung beschreiben, für die die Meldung erstellt wird. Beschreibende Titel helfen bei der einfachen Identifikation der Warnmeldung. Namen von Meldungsrichtlinien werden an anderer Stelle im System als Referenz angezeigt.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>(Optional) Wählen Sie einen anderen Schweregrad aus.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/tip.svg" alt="Hinweis">
+</td>
+<td class="content">
+Die Schweregrade für die Meldungsrichtlinie sind farblich kodiert und lassen sich problemlos über die Seite „Meldungen &gt; Verlauf“ filtern.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Bestimmen Sie die Art der Unterdrückung für die Alarmrichtlinie, wenn sie aktiv ist, indem Sie einen Typ aus <strong>supporsible Types</strong> auswählen. Sie können mehrere Typen auswählen.</p>
+<div class="paragraph">
+<p>Bestätigen Sie, dass die Assoziationen Sinn ergeben. Sie haben z. B. für eine Netzwerkwarnrichtlinie <strong>Network Suppression</strong> ausgewählt.</p>
+</div>
+</li>
+<li>
+<p>(Optional) Wählen oder entfernen Sie Cluster-Zuordnungen mit der Richtlinie.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/caution.svg" alt="Achtung">
+</td>
+<td class="content">
+Wenn Sie der Installation nach dem Erstellen der Richtlinie ein neues Cluster hinzufügen, wird das Cluster nicht automatisch zu vorhandenen Meldungsrichtlinien hinzugefügt. Sie müssen den neuen Cluster auswählen, den Sie mit der Richtlinie verknüpfen möchten.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>(Optional) Ändern Sie eine oder mehrere E-Mail-Adressen, an die Benachrichtigungen gesendet werden. Wenn Sie mehrere Adressen eingeben, müssen Sie die einzelnen Adressen mit einem Komma trennen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Warnhinweise Speichern</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="löschen-einer-meldungsrichtlinie">Löschen einer Meldungsrichtlinie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Durch Löschen einer Meldungsrichtlinie wird diese endgültig aus dem System entfernt. E-Mail-Benachrichtigungen werden für diese Richtlinie nicht mehr gesendet, und Cluster-Zuordnungen zu der Richtlinie werden entfernt.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Wählen Sie <strong>Alarme</strong> &gt; <strong>Richtlinien</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie unter <strong>Actions</strong> das Menü aus, um weitere Optionen anzuzeigen.</p>
+</li>
+<li>
+<p>Wählen Sie <strong>Richtlinie Löschen</strong>.</p>
+</li>
+<li>
+<p>Bestätigen Sie die Aktion.</p>
+<div class="paragraph">
+<p>Die Richtlinie wird dauerhaft aus dem System entfernt.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unterdrückte-cluster-anzeigen">Unterdrückte Cluster anzeigen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Auf der Seite <strong>unterdrückte Cluster</strong> im Dropdown-Menü <strong>Warnungen</strong> in der <strong>Alle Cluster-Ansicht</strong> können Sie eine Liste mit Clustern anzeigen, bei denen Warnungen unterdrückt werden.</p>
+</div>
+<div class="paragraph">
+<p>NetApp Support oder Kunden können Warnungsbenachrichtigungen für ein Cluster bei Wartungsarbeiten unterdrücken. Wenn Benachrichtigungen bei einem Cluster mithilfe der Upgrade-Unterdrückung unterdrückt werden, werden allgemeine Warnmeldungen, die während Upgrades auftreten, nicht gesendet. Es gibt außerdem eine Option zur vollständigen Alarmunterdrückung, mit der die Alarmierung für ein Cluster für eine bestimmte Dauer angehalten wird. Sie können alle E-Mail-Warnungen anzeigen, die nicht gesendet werden, wenn Benachrichtigungen unterdrückt werden, auf der Seite <strong>Verlauf</strong> des Menüs <strong>Alarme</strong>. Unterdrückte Benachrichtigungen werden nach Ablauf der festgelegten Dauer automatisch wieder aufgenommen.</p>
+</div>
+<div class="paragraph">
+<p>Die folgenden Informationen finden Sie auf der Seite <strong>unterdrückte Cluster</strong>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Überschrift</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gesellschaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dem Cluster zugewiesener Firmenname.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster-ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zugewiesene Cluster-Nummer beim Erstellen des Clusters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster-Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dem Cluster zugewiesener Name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Startzeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen gestartet wurde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endzeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen geplant ist, um zu beenden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typ</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Legt fest, welche Warnmeldungen und Ereignisse unterdrückt werden. Folgende Typen sind möglich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Voll</strong>: Alle Warnungen für den Cluster werden für die angegebene Dauer unterdrückt. Es werden keine Support-Cases oder E-Mail-Benachrichtigungen generiert.</p>
+</li>
+<li>
+<p><strong>Upgrades</strong>: Nicht kritische Cluster-Warnungen werden für die angegebene Dauer unterdrückt. Kritische Warnungen generieren weiterhin Support-Fälle und E-Mails.</p>
+</li>
+<li>
+<p><strong>Computing</strong>: Warnungen, die von VMware auf den Computing-Nodes ausgelöst werden, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>NodeHardware</strong>: Warnungen, die mit der Knotenwartung verbunden sind, werden unterdrückt. Beispielsweise lassen sich Laufwerke austauschen oder Nodes offline schalten.</p>
+</li>
+<li>
+<p><strong>Laufwerk</strong>: Warnungen, die mit dem Laufwerkszustand verbunden sind, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>Netzwerk</strong>: Warnungen, die mit der Netzwerkkonfiguration und dem Zustand verbunden sind, werden unterdrückt.</p>
+</li>
+<li>
+<p><strong>Leistung</strong>: Stromredundanz-Warnungen werden unterdrückt. Es unterdrückt keine <em>nodeOffline</em> Warnung, die bei einem totalen Stromausfall auftreten würde.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktionen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wählen Sie die Option aus, um Benachrichtigungen für ein Cluster zu unterdrücken oder wieder aufzunehmen.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-benachrichtigungen-unterdrücken">Cluster-Benachrichtigungen unterdrücken</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können Alarmbenachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster oder mehrere Cluster unterdrücken.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Führen Sie einen der folgenden Schritte aus:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Wählen Sie aus der Übersicht <strong>Dashboard</strong> das Menü Aktionen für den Cluster aus, den Sie unterdrücken möchten.</p>
+</li>
+<li>
+<p>Wählen Sie unter <strong>Alerts</strong> &gt; <strong>Cluster Suppression</strong> die Option <strong>Cluster unterdrücken</strong> aus.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Gehen Sie im Dialogfeld <strong>Warnungen für Cluster unterdrücken</strong> wie folgt vor:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Wenn Sie auf der Seite <strong>Unterdrückte Cluster</strong> die Schaltfläche <strong>Cluster unterdrücken</strong> ausgewählt haben, wählen Sie einen Cluster aus.</p>
+</li>
+<li>
+<p>Wählen Sie einen Alarmunterdrückungstyp entweder als <strong>Full</strong>, <strong>Upgrades</strong>, <strong>Compute</strong>, <strong>NodeHardware</strong>, <strong>Drive</strong>, <strong>Netzwerk</strong> oder <strong>Power</strong>. ,Erfahren Sie mehr über Unterdrückungstypen.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Ein Cluster kann mehrere Unterdrückungstypen haben, kann aber keinen Unterdrückungstyp gemeinsam nutzen. Ein Cluster kann beispielsweise eine <strong>Full</strong>-, <strong>Compute</strong>- und <strong>Drive</strong>-Unterdrückung haben, aber keine zwei <strong>Full</strong>-Unterdrückung. Wenn eine Unterdrückung bereits in einem Cluster vorhanden ist, ist sie ausgegraut. Um eine bestehende Unterdrückung zu ersetzen, wählen Sie <strong>vorhandene</strong> überschreiben und den neuen Unterdrückungstyp aus.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Wählen Sie eine allgemeine Dauer aus, oder geben Sie ein benutzerdefiniertes Enddatum und eine Uhrzeit ein, während der Benachrichtigungen unterdrückt werden sollen.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Wählen Sie <strong>Unterdrücken</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/solidfire-active-iq/images/note.svg" alt="Anmerkung">
+</td>
+<td class="content">
+Durch diese Aktion werden außerdem bestimmte oder alle Benachrichtigungen an den NetApp Support unterdrückt. Wenn die Cluster-Unterdrückung wirksam ist, kann NetApp Support oder jeder Benutzer, der zum Anzeigen des Clusters berechtigt ist, den Status der Unterdrückung aktualisieren.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-unterdrückung-von-einem-cluster-beenden">Cluster-Unterdrückung von einem Cluster beenden</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sie können die Unterdrückung von Cluster-Warnmeldungen beenden, die mit der Funktion Cluster unterdrücken angewendet wurden. Auf diese Weise können die Cluster den normalen Status von Warnmeldungen fortsetzen.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Schritte</div>
+<ol class="arabic">
+<li>
+<p>Aus der <strong>Dashboard</strong> Übersicht oder <strong>Alerts</strong> &gt; <strong>Cluster Suppression</strong>, Endunterdrückung für die einzelnen oder mehrere Cluster, die wieder normal melden sollen:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Wählen Sie für einen einzelnen Cluster das Menü Aktionen für den Cluster aus, und wählen Sie <strong>Unterdrückung beenden</strong>.</p>
+</li>
+<li>
+<p>Wählen Sie für mehrere Cluster die Cluster aus und wählen Sie dann <strong>Ausgewählte suppressions beenden</strong> aus.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="e-mail-zur-benachrichtigung">E-Mail zur Benachrichtigung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Abonnenten von SolidFire Active IQ-Warnungen erhalten für jede Warnmeldung, die auf dem System ausgelöst wird, unterschiedliche Status-E-Mails. Es gibt drei Arten von Status-E-Mails, die mit Warnmeldungen verknüpft sind:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 65%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Neue E-Mail-Benachrichtigung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diese Art von E-Mail wird gesendet, wenn eine Benachrichtigung ausgelöst wird.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erinnerungs-E-Mail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diese Art von E-Mail wird alle 24 Stunden gesendet, solange die Warnung weiterhin aktiv ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alarm – E-Mail Gelöst</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Diese Art von E-Mail wird gesendet, wenn das Problem behoben ist.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Nach dem Erstellen einer Meldungsrichtlinie und beim Generieren einer neuen Meldung für diese Richtlinie wird eine E-Mail an die angegebene E-Mail-Adresse gesendet (siehe ,Erstellen Sie eine Meldungsrichtlinie).</p>
+</div>
+<div class="paragraph">
+<p>Je nach Art des gemeldeten Fehlers verwendet die Zeile für die E-Mail-Benachrichtigung eines der folgenden Formate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nicht gelöster Cluster-Fehler: <code>[cluster fault code] fault on [cluster name] ([severity])</code></p>
+</li>
+<li>
+<p>Gelöster Cluster-Fehler: <code>Resolved: [cluster fault code] fault on [cluster name] ([severity])</code></p>
+</li>
+<li>
+<p>Nicht behobene Warnmeldung: <code>[policy name] alert on [cluster name] ([severity])</code></p>
+</li>
+<li>
+<p>Behobene Warnmeldung Fehler: <code>Resolved: [policy name] alert on [cluster name] ([severity])</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Der Inhalt der Benachrichtigungs-E-Mail ähnelt dem folgenden Beispiel:<span class="image"><img src="./media/example_email.PNG" alt="Beispiel für eine E-Mail"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="weitere-informationen">Weitere Informationen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.netapp.com/support-and-training/documentation/" target="_blank" rel="noopener">"NetApp Produktdokumentation"</a></p>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Allgemeine Geschäftsbedingungen</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Richtlinie zu Datenschutz</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Richtlinie zu Cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie-Einstellungen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Feedback zu dieser Seite senden</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/de-de/solidfire-active-iq/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/de-de/solidfire-active-iq/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/de-de/solidfire-active-iq/js/prism.js'></script>
+      <script type="text/javascript" src='/de-de/solidfire-active-iq/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/de-de/solidfire-active-iq/js/www-ntap.js'></script>
+    <script src='/de-de/solidfire-active-iq/js/tabbed-blocks.js'></script>
+    <script src='/de-de/solidfire-active-iq/js/sidebar.js'></script>
+  </body></html>
