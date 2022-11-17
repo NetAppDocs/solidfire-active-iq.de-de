@@ -155,7 +155,7 @@ image:more_information.PNG["Symbol für weitere Informationen"]
 
  a| 
 image:more_details.PNG["Weitere Details"]
-| Wählen Sie, um weitere Informationen zu erhalten. 
+| Wählen Sie, um weitere Informationen zu erhalten.image:description.PNG["Beschreibung"] 
 |===
 
 

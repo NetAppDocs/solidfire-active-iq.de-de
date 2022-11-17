@@ -752,7 +752,6 @@
   <block id="5f9d43bb88c35632903d5eb16decc380" category="cell">Weitere Informationen. Wählen Sie, um weitere Optionen anzuzeigen.</block>
   <block id="e44b6e341cd265f3c2894bc90107e6cb" category="inline-image-macro">Weitere Details</block>
   <block id="45ebbd5bdb9477285076cbc10c602f1d" category="paragraph"><block ref="45ebbd5bdb9477285076cbc10c602f1d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea2e81a1b728b000d0a80f1b7adb8d39" category="cell">Wählen Sie, um weitere Informationen zu erhalten.</block>
   <block id="1ae8a55f317d3b2570e79a0b4a668040" category="section-title">Feedback mitteilen</block>
   <block id="d6670ea8650dcb3671cb6d4eeba43553" category="paragraph">Sie können die SolidFire Active IQ-Benutzeroberfläche verbessern und alle UI-Probleme beheben, indem Sie die in der gesamten Benutzeroberfläche verfügbare E-Mail-Feedback-Option verwenden.</block>
   <block id="0c6ab2fbcdd7cedaa7510d6167c60089" category="list-text">Wählen Sie auf einer beliebigen Seite der Benutzeroberfläche die aus <block ref="0394d5cd9adafeb64d44c535a81d6cea" category="inline-image-macro-rx" type="image"></block> Symbol und wählen Sie *Feedback*.</block>
@@ -1021,4 +1020,50 @@
   <block id="08edd2123939d5309dced149763a50ee" category="sidebar">NetApp HCI</block>
   <block id="d60c463bb4096f3ed4bd1618626dfe10" category="sidebar">Fehlerbehebung</block>
   <block id="0607bd332350ef193bc31ef1c742c508" category="sidebar">Wenden Sie sich an den technischen Support</block>
+  <block id="1f8599a5bc6899eb5bf58ed4e4161fee" category="summary">Informationen zur Ansicht aller Knoten in SolidFire Active IQ.</block>
+  <block id="0975b9d0e95957f2f96d932db082c1ac" category="doc">Ansicht Alle Knoten</block>
+  <block id="433600042717615fb07744743de63c31" category="paragraph">Sie können Informationen über alle Knoten eines Unternehmens anzeigen, einschließlich gedrosselter Knoten, wenn Sie den Unternehmensnamen aus der Dropdown-Liste *Alle Knoten anzeigen* auswählen. Nachdem Sie den Firmennamen ausgewählt haben, ersetzt es in der oberen Navigationsleiste *Alle Knoten Ansicht*.</block>
+  <block id="e5a76b51fb2c64713124ea9105762e59" category="admonition">Wenn Ihr SolidFire Active IQ-Konto nur einen Firmennamen mit ihm verknüpft hat, werden die Seiten *Alle Knoten* und *gedrosselte Knoten*, die im Seitenfenster zur Verfügung stehen, standardmäßig auf diesen Firmennamen gesetzt.</block>
+  <block id="d38dc317c03da92e20a4b04b5bc3d0bb" category="paragraph">Erfahren Sie mehr über die Seiten Alle Knoten und gedrosselte Knoten:</block>
+  <block id="cef6e5e02f93e64082971483abce5410" category="list-text"><block ref="4a6921278f1195bd29f94675e88563bf" category="inline-xref-macro-rx"></block></block>
+  <block id="a612d4889a4b987a98be508fa9b72514" category="list-text"><block ref="fc138af61db82eb110cc73e50bacbc58" category="inline-xref-macro-rx"></block></block>
+  <block id="c10bb4a02280372986102fdf75316770" category="section-title">Zeigen Sie Informationen zu allen Nodes an</block>
+  <block id="b1f4982719491c265d820d829838d744" category="paragraph">Auf der Seite *Alle Knoten*, die über das Seitenfeld zur Verfügung steht, können Sie Informationen zu allen Knoten Ihres ausgewählten Unternehmens anzeigen.</block>
+  <block id="adbcdb5d92797a4f02ac6baa443d9eea" category="list-text">Cluster Master: Der Node, der clusterweite administrative Aufgaben ausführt und die virtuelle IP-Adresse des Managements und die virtuelle Speicher-IP-Adresse enthält.</block>
+  <block id="b13826bda37dd4294975eddb82110cdc" category="section-title">Zeigen Sie Informationen über gedrosselte Knoten an</block>
+  <block id="9cc0e77dc371f1221f703c1017def718" category="paragraph">Auf der Seite *gedrosselte Knoten*, die über das Seitenfeld zur Verfügung steht, können Sie Informationen zu allen Knoten mit einer Drosselung von mehr als 1% in den letzten 30 Tagen für Ihr ausgewähltes Unternehmen anzeigen.</block>
+  <block id="67daf92c833c41c95db874e18fcb2786" category="inline-image-macro">beschreibung</block>
+  <block id="f1e1bd41e60ac6f95abc16508950c3b8" category="paragraph">Sie haben die Möglichkeit, Knoten mit einer *hohen*-, *eingeschränkten*- oder *kombinierten* (hoch- und limitierte) Drosselzeit anzuzeigen. Sie können auch Beschreibungen für die Tabelle zur Knotendrosselung sowie die Optionen für die hohe, begrenzte und kombinierte Drosselung anzeigen, indem Sie die auswählen <block ref="cc03efa5053a59aadd57723f4094ebf4" category="inline-image-macro-rx" type="image"></block> Symbol, wie im folgenden Beispiel dargestellt:</block>
+  <block id="7437c96090b9e7622a8cc8b0ea7e9463" category="inline-image-macro">Beschreibung der gedrosselten Knoten und der Drosselungszeiten</block>
+  <block id="937684e3d3653f5c975333de09fb9330" category="paragraph"><block ref="937684e3d3653f5c975333de09fb9330" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="06bd3adb75f54eaaef79051e0bedce7e" category="paragraph">Erfahren Sie mehr über die für gedrosselte Knoten verfügbaren Informationen.</block>
+  <block id="177bd0b3a4f8a7108b090f6a65391a6a" category="paragraph">*Ansicht der hohen Drosselung der Zeit*</block>
+  <block id="6f2138dc82fdb66cf2acb0c7a0e6640c" category="cell">High Throttle Letzte 24 Stunden</block>
+  <block id="c4081b9c016ea439674e01e58feaf507" category="cell">Der Prozentsatz der hohen Knotendrosselung in den letzten 24 Stunden.</block>
+  <block id="c8bb2951a4d22e6ba7b173f104171af0" category="cell">High Throttle Letzte 7 Tage</block>
+  <block id="5f91560b20aab2c566a016eff6fdc9fb" category="cell">Der Prozentsatz der hohen Knotendrosselung in den letzten 7 Tagen.</block>
+  <block id="6160ff0b59753dc9675cca3d81dce928" category="cell">High Throttle Letzte 14 Tage</block>
+  <block id="eabe719c92fe0e07378cca0e6da0294c" category="cell">Der Prozentsatz der hohen Knotendrosselung in den letzten 14 Tagen.</block>
+  <block id="978d3c96489cfee1c52e7a438120c1e1" category="cell">High Throttle Letzte 30 Tage</block>
+  <block id="c3cf47e48bfcfb747df7b41081aa5431" category="cell">Der Prozentsatz der hohen Knotendrosselung in den letzten 30 Tagen.</block>
+  <block id="445c634faae3fd954f036248de3446b2" category="paragraph">*Beschränkte Sicht auf die Drosselung der Zeit*</block>
+  <block id="c5fbcd58619b808515d831e93bd3dc8e" category="cell">Eingeschränkte Drosselklappe Letzte 24 Stunden</block>
+  <block id="bb22c7f1ca024aa2fc061f651863b053" category="cell">Der Prozentsatz der begrenzten Knotendrosselung in den letzten 24 Stunden.</block>
+  <block id="f80a309868884e96851af006bfd17096" category="cell">Eingeschränkte Gasbetätigung Letzte 7 Tage</block>
+  <block id="fcd7d476a1e02aa2b4be38a9a213c347" category="cell">Der Prozentsatz der begrenzten Knotendrosselung in den letzten 7 Tagen.</block>
+  <block id="0e2a479c84ac5e3a2b1baf5457e34d42" category="cell">Eingeschränkte Gasbetätigung Letzte 14 Tage</block>
+  <block id="2701012f9f67519d3afe54c041032a9a" category="cell">Der Prozentsatz der begrenzten Knotendrosselung in den letzten 14 Tagen.</block>
+  <block id="55c2b0ebc9cd6868c5776d24447d1c7b" category="cell">Eingeschränkte Gasbetätigung Letzte 30 Tage</block>
+  <block id="0eda97161d145e2be25d9af5da88d209" category="cell">Der Prozentsatz der begrenzten Knotendrosselung in den letzten 30 Tagen.</block>
+  <block id="cc7144e5422d5b9b480bfd8a86661966" category="paragraph">* Kombinierte Ansicht der Drosselzeit*</block>
+  <block id="5d234f16125b296396c9d5a106f7f65e" category="cell">Kombinierte Gasbetätigung Letzte 24 Stunden</block>
+  <block id="357d46b83e525d1425914a6b9034833e" category="cell">Der Prozentsatz der kombinierten Knotendrosselung in den letzten 24 Stunden.</block>
+  <block id="92fb43b31cc7256efc88d23a3660a5f8" category="cell">Kombinierte Drosselklappe Letzte 7 Tage</block>
+  <block id="027887594afcf01399d731fb558b7f4d" category="cell">Der Prozentsatz der kombinierten Knotendrosselung in den letzten 7 Tagen.</block>
+  <block id="eb0e388651cfe1fecf1ba996c05f482c" category="cell">Kombinierte Drosselklappe Letzte 14 Tage</block>
+  <block id="2b93182c4ea5557ec259c61e340719aa" category="cell">Der Prozentsatz der kombinierten Knotendrosselung in den letzten 14 Tagen.</block>
+  <block id="83569553655040d1b128eb95f65db596" category="cell">Kombinierte Drosselklappe Letzte 30 Tage</block>
+  <block id="f15e45347229ad94158fcbd6d2423fb7" category="cell">Der Prozentsatz der kombinierten Knotendrosselung in den letzten 30 Tagen.</block>
+  <block id="13b17ea50aa3270a0eb1ac21882cd1b6" category="cell">Wählen Sie, um weitere Informationen zu erhalten.<block ref="b88c7530ca9d8b23f1e4691f94e3f70b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="db2e76d805debcb4c30511df6e0aecf1" category="list-text"><block ref="db2e76d805debcb4c30511df6e0aecf1" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -1,0 +1,181 @@
+---
+permalink: task-active-iq-all-nodes-view.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, all, throttling, throttled 
+summary: Informationen zur Ansicht aller Knoten in SolidFire Active IQ. 
+---
+= Ansicht Alle Knoten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Informationen über alle Knoten eines Unternehmens anzeigen, einschließlich gedrosselter Knoten, wenn Sie den Unternehmensnamen aus der Dropdown-Liste *Alle Knoten anzeigen* auswählen. Nachdem Sie den Firmennamen ausgewählt haben, ersetzt es in der oberen Navigationsleiste *Alle Knoten Ansicht*.
+
+
+NOTE: Wenn Ihr SolidFire Active IQ-Konto nur einen Firmennamen mit ihm verknüpft hat, werden die Seiten *Alle Knoten* und *gedrosselte Knoten*, die im Seitenfenster zur Verfügung stehen, standardmäßig auf diesen Firmennamen gesetzt.
+
+Erfahren Sie mehr über die Seiten Alle Knoten und gedrosselte Knoten:
+
+*  information about all nodes
+*  information about throttled nodes
+
+
+
+
+== Zeigen Sie Informationen zu allen Nodes an
+
+Auf der Seite *Alle Knoten*, die über das Seitenfeld zur Verfügung steht, können Sie Informationen zu allen Knoten Ihres ausgewählten Unternehmens anzeigen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Cluster-ID | Zugewiesene Cluster-Nummer beim Erstellen des Clusters. 
+
+
+| Cluster | Dem Cluster zugewiesener Name 
+
+
+| Node-ID | Vom System generierte ID für den Node: 
+
+
+| Status  a| 
+Der Status des Node:
+
+* Gesund: Der Node weist keine kritischen Fehler auf.
+* Offline: Auf den Node kann nicht zugegriffen werden. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+* Fehler: Diesem Knoten sind Fehler zugeordnet. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+
+
+
+
+| Name | Der vom System generierte Node-Name. 
+
+
+| Typ | Zeigt den Modelltyp des Node. 
+
+
+| Seriennummer | Dem Node zugewiesene eindeutige Seriennummer. 
+
+
+| Version | Version der auf dem Node ausgeführten Element Software. 
+
+
+| Management-IP | Der Node zugewiesene Management-IP-Adresse für 1-GbE- oder 10-GbE-Netzwerkadministratoraufgaben. 
+
+
+| Storage-IP | Die Speicher-IP-Adresse ist dem Node zugewiesen, der für die iSCSI-Netzwerkerkennung und den gesamten Datenverkehr im Datennetzwerk verwendet wird. 
+
+
+| Rolle  a| 
+Gibt an, welche Rolle der Node im Cluster hat:
+
+* Cluster Master: Der Node, der clusterweite administrative Aufgaben ausführt und die virtuelle IP-Adresse des Managements und die virtuelle Speicher-IP-Adresse enthält.
+* Ensemble Node: Ein Knoten, der am Cluster teilnimmt. Je nach Clustergröße gibt es drei oder fünf Ensemble-Knoten.
+* Fibre Channel: Ein FC-Node im Cluster.
+* Wenn ein Knoten keine Rolle hat, wird der Wert auf - (Dash) gesetzt.
+
+
+|===
+
+
+== Zeigen Sie Informationen über gedrosselte Knoten an
+
+Auf der Seite *gedrosselte Knoten*, die über das Seitenfeld zur Verfügung steht, können Sie Informationen zu allen Knoten mit einer Drosselung von mehr als 1% in den letzten 30 Tagen für Ihr ausgewähltes Unternehmen anzeigen.
+
+Sie haben die Möglichkeit, Knoten mit einer *hohen*-, *eingeschränkten*- oder *kombinierten* (hoch- und limitierte) Drosselzeit anzuzeigen. Sie können auch Beschreibungen für die Tabelle zur Knotendrosselung sowie die Optionen für die hohe, begrenzte und kombinierte Drosselung anzeigen, indem Sie die auswählen image:description.PNG["beschreibung"] Symbol, wie im folgenden Beispiel dargestellt:
+
+image:throttled_nodes.PNG["Beschreibung der gedrosselten Knoten und der Drosselungszeiten"]
+
+Erfahren Sie mehr über die für gedrosselte Knoten verfügbaren Informationen.
+
+[cols="25,75"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Cluster-ID | Zugewiesene Cluster-Nummer beim Erstellen des Clusters. 
+
+
+| Cluster | Dem Cluster zugewiesener Name 
+
+
+| Node-ID | Vom System generierte ID für den Node: 
+
+
+| Name | Der vom System generierte Node-Name. 
+
+
+| Typ | Zeigt den Modelltyp des Node. 
+
+
+| Version | Version der auf dem Node ausgeführten Element Software. 
+
+
+ a| 
+*Ansicht der hohen Drosselung der Zeit*
+
+
+
+| High Throttle Letzte 24 Stunden | Der Prozentsatz der hohen Knotendrosselung in den letzten 24 Stunden. 
+
+
+| High Throttle Letzte 7 Tage | Der Prozentsatz der hohen Knotendrosselung in den letzten 7 Tagen. 
+
+
+| High Throttle Letzte 14 Tage | Der Prozentsatz der hohen Knotendrosselung in den letzten 14 Tagen. 
+
+
+| High Throttle Letzte 30 Tage | Der Prozentsatz der hohen Knotendrosselung in den letzten 30 Tagen. 
+
+
+ a| 
+*Beschränkte Sicht auf die Drosselung der Zeit*
+
+
+
+| Eingeschränkte Drosselklappe Letzte 24 Stunden | Der Prozentsatz der begrenzten Knotendrosselung in den letzten 24 Stunden. 
+
+
+| Eingeschränkte Gasbetätigung Letzte 7 Tage | Der Prozentsatz der begrenzten Knotendrosselung in den letzten 7 Tagen. 
+
+
+| Eingeschränkte Gasbetätigung Letzte 14 Tage | Der Prozentsatz der begrenzten Knotendrosselung in den letzten 14 Tagen. 
+
+
+| Eingeschränkte Gasbetätigung Letzte 30 Tage | Der Prozentsatz der begrenzten Knotendrosselung in den letzten 30 Tagen. 
+
+
+ a| 
+* Kombinierte Ansicht der Drosselzeit*
+
+
+
+| Kombinierte Gasbetätigung Letzte 24 Stunden | Der Prozentsatz der kombinierten Knotendrosselung in den letzten 24 Stunden. 
+
+
+| Kombinierte Drosselklappe Letzte 7 Tage | Der Prozentsatz der kombinierten Knotendrosselung in den letzten 7 Tagen. 
+
+
+| Kombinierte Drosselklappe Letzte 14 Tage | Der Prozentsatz der kombinierten Knotendrosselung in den letzten 14 Tagen. 
+
+
+| Kombinierte Drosselklappe Letzte 30 Tage | Der Prozentsatz der kombinierten Knotendrosselung in den letzten 30 Tagen. 
+
+
+| Durchschnittlicher Durchsatz Letzte 30 Minuten | Summe der durchschnittlich ausgeführten Durchsatzraten in den letzten 30 Minuten für alle Volumes mit diesem Node als primäres Volume. 
+
+
+| IOPS-Durchschnitt letzte 30 Minuten | Summe der durchschnittlichen IOPS, die in den letzten 30 Minuten für alle Volumes ausgeführt wurden, über die dieser Node als primärer Node verfügt. 
+
+
+| Durchschnittliche Latenz (µs) Letzte 30 Minuten | Die durchschnittliche Zeit in Mikrosekunden, wie sie über die letzten 30 Minuten gemessen wurde, um Lese- und Schreibvorgänge für alle Volumes abzuschließen, bei denen dieser Node als primärer Wert gilt. Zur Meldung dieser Kennzahl, die auf aktiven Volumes basiert, werden nur Werte ohne Latenz verwendet. 
+|===
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]
