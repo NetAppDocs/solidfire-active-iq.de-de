@@ -15,17 +15,17 @@ summary: Hier finden Sie Informationen zu Aufgaben im Zusammenhang mit Warnmeldu
 
 Informationen zu Aufgaben mit Warnmeldungen oder Durchführung:
 
-*  alerts history
-*  history details
-*  alert policies
-* ,Erstellen einer Meldungsrichtlinie
-* ,Meldungsrichtlinientypen
-*  an alert policy
-*  an alert policy
-*  suppressed clusters
-*  cluster notifications
-*  cluster suppression from a cluster
-*  notification email
+* <<Anzeigen des Alarmverlaufs>>
+* <<Details zum Alarmverlauf>>
+* <<Anzeigen von Meldungsrichtlinien>>
+* <<create_alert_policy,Erstellen einer Meldungsrichtlinie>>
+* <<alert_policy_types,Meldungsrichtlinientypen>>
+* <<Bearbeiten einer Meldungsrichtlinie>>
+* <<Löschen einer Meldungsrichtlinie>>
+* <<Unterdrückte Cluster anzeigen>>
+* <<Cluster-Benachrichtigungen unterdrücken>>
+* <<Cluster-Unterdrückung von einem Cluster beenden>>
+* <<E-Mail zur Benachrichtigung>>
 
 
 
@@ -138,7 +138,7 @@ Sie können eine Meldungsrichtlinie erstellen, um Informationen aus der *Alle Cl
 .Schritte
 . Wählen Sie *Alarme* > *Richtlinien*.
 . Wählen Sie *Create Policy*.
-. Wählen Sie einen Alarmtyp aus der Liste *Richtlinientyp* aus. Siehe ,Meldungsrichtlinientypen.
+. Wählen Sie einen Alarmtyp aus der Liste *Richtlinientyp* aus. Siehe <<alert_policy_types,Meldungsrichtlinientypen>>.
 +
 
 NOTE: Im Dialogfeld *Create Policy* gibt es je nach gewähltem Richtlinientyp weitere Policy-spezifische Felder.
@@ -335,7 +335,7 @@ Sie können Alarmbenachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster
 . Gehen Sie im Dialogfeld *Warnungen für Cluster unterdrücken* wie folgt vor:
 +
 .. Wenn Sie auf der Seite *Unterdrückte Cluster* die Schaltfläche *Cluster unterdrücken* ausgewählt haben, wählen Sie einen Cluster aus.
-.. Wählen Sie einen Alarmunterdrückungstyp entweder als *Full*, *Upgrades*, *Compute*, *NodeHardware*, *Drive*, *Netzwerk* oder *Power*. ,Erfahren Sie mehr über Unterdrückungstypen.
+.. Wählen Sie einen Alarmunterdrückungstyp entweder als *Full*, *Upgrades*, *Compute*, *NodeHardware*, *Drive*, *Netzwerk* oder *Power*. <<suppressed_types,Erfahren Sie mehr über Unterdrückungstypen>>.
 +
 
 NOTE: Ein Cluster kann mehrere Unterdrückungstypen haben, kann aber keinen Unterdrückungstyp gemeinsam nutzen. Ein Cluster kann beispielsweise eine *Full*-, *Compute*- und *Drive*-Unterdrückung haben, aber keine zwei *Full*-Unterdrückung. Wenn eine Unterdrückung bereits in einem Cluster vorhanden ist, ist sie ausgegraut. Um eine bestehende Unterdrückung zu ersetzen, wählen Sie *vorhandene* überschreiben und den neuen Unterdrückungstyp aus.
@@ -383,7 +383,7 @@ Abonnenten von SolidFire Active IQ-Warnungen erhalten für jede Warnmeldung, die
 
 | Alarm – E-Mail Gelöst | Diese Art von E-Mail wird gesendet, wenn das Problem behoben ist. 
 |===
-Nach dem Erstellen einer Meldungsrichtlinie und beim Generieren einer neuen Meldung für diese Richtlinie wird eine E-Mail an die angegebene E-Mail-Adresse gesendet (siehe ,Erstellen Sie eine Meldungsrichtlinie).
+Nach dem Erstellen einer Meldungsrichtlinie und beim Generieren einer neuen Meldung für diese Richtlinie wird eine E-Mail an die angegebene E-Mail-Adresse gesendet (siehe <<create_alert_policy,Erstellen Sie eine Meldungsrichtlinie>>).
 
 Je nach Art des gemeldeten Fehlers verwendet die Zeile für die E-Mail-Benachrichtigung eines der folgenden Formate:
 

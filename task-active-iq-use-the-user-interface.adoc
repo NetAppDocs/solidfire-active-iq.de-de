@@ -13,13 +13,13 @@ summary: Informieren Sie sich über die Merkmale und Funktionen der Benutzerober
 [role="lead"]
 Erfahren Sie mehr über die Funktionen der Benutzeroberfläche in link:https://activeiq.solidfire.com/["SolidFire Active IQ (Anmeldung erforderlich)"^]:
 
-*  filters
-*  lists
-*  graphs and select date ranges
-*  list views and report data
-*  a cluster
-*  reference
-*  feedback
+* <<Verwenden Sie Filter>>
+* <<Sortierlisten>>
+* <<Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus>>
+* <<Exportieren von Listenansichten und Berichtsdaten>>
+* <<Wählen Sie ein Cluster aus>>
+* <<Symbolreferenz>>
+* <<Feedback mitteilen>>
 
 
 
@@ -79,6 +79,7 @@ Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Re
 Positionieren Sie den Mauszeiger über einer Diagrammlinie, um Details zu den Zeitpunkten anzuzeigen.
 
 .Erweitern Sie das Diagramm-Beispiel
+[%collapsible]
 ====
 image:graphs_and_date_ranges.PNG["Diagramme und Datumsbereiche"]
 

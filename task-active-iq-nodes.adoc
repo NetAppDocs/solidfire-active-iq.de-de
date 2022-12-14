@@ -15,8 +15,8 @@ Auf der Seite *Nodes*, die über das Seitenfeld eines ausgewählten Clusters ver
 
 Die verfügbaren Details variieren je nach System:
 
-*  SolidFire storage node details
-*  NetApp HCI storage and compute node details
+* <<Zeigen Sie Details zum SolidFire Storage-Node an>>
+* <<Zeigen Sie Details zu NetApp HCI Storage- und Computing-Nodes an>>
 
 
 
@@ -111,8 +111,8 @@ Auf der Seite *Nodes* gibt die Informationsleiste einen schnellen Überblick üb
 
 Erfahren Sie, wie Sie Informationen zu Storage-Nodes und Computing-Nodes in einem NetApp HCI Cluster anzeigen:
 
-*  information about storage nodes
-*  information about compute nodes
+* <<Zeigt Informationen zu Storage-Nodes an>>
+* <<Informationen zu Computing-Nodes anzeigen>>
 
 
 

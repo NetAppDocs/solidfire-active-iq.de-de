@@ -13,8 +13,8 @@ summary: Weitere Informationen zum Anzeigen von Snapshot-Details und zum Snapsho
 [role="lead"]
 Weitere Informationen zur Anzeige von Snapshot- und Snapshot-Zeitplänen:
 
-* 
-*  Schedules
+* <<Snapshots>>
+* <<Snapshot Zeitpläne>>
 
 
 

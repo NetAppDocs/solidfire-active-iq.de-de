@@ -15,8 +15,8 @@ Die Seite *Replikation*, die im Seitenbereich für einen ausgewählten Cluster v
 
 Erfahren Sie mehr über die Seiten zu Cluster-Paaren und Volumes-Paaren:
 
-* ,Cluster-Paare
-* ,Volume-Paare
+* <<cluster_pairs,Cluster-Paare>>
+* <<volume_pairs,Volume-Paare>>
 
 
 

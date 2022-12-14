@@ -17,8 +17,8 @@ Wählen Sie das Dropdown-Menü *Details anzeigen* aus, um weitere Informationen 
 
 Die verfügbaren Details variieren je nach System:
 
-*  system
-*  HCI system overview
+* <<Reine Storage-Systeme>>
+* <<NetApp HCI Systemübersicht>>
 
 
 

@@ -18,8 +18,8 @@ NOTE: Wenn Ihr SolidFire Active IQ-Konto nur einen Firmennamen mit ihm verknüpf
 
 Erfahren Sie mehr über die Seiten Alle Knoten und gedrosselte Knoten:
 
-*  information about all nodes
-*  information about throttled nodes
+* <<Zeigen Sie Informationen zu allen Nodes an>>
+* <<Zeigen Sie Informationen über gedrosselte Knoten an>>
 
 
 

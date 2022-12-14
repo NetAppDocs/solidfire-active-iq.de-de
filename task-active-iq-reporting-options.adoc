@@ -13,15 +13,15 @@ summary: Erfahren Sie mehr über die Berichtsoptionen für ein ausgewähltes Clu
 [role="lead"]
 Erfahren Sie mehr über das Dropdown-Menü *Reporting* im Seitenfeld:
 
-* 
-* 
-* 
-*  log
-* 
-* 
-*  Sessions
-*  Networks
-*  Collection
+* <<Kapazität>>
+* <<Effizienz>>
+* <<Leistung>>
+* <<Fehlerprotokoll>>
+* <<Veranstaltungen>>
+* <<Meldungen>>
+* <<ISCSI-Sitzungen>>
+* <<Virtuelle Netzwerke>>
+* <<API-Sammlung>>
 
 
 
@@ -251,6 +251,7 @@ Die folgenden Informationen werden für das ausgewählte Cluster gemeldet.
 Auf der Seite *iSCSI-Sitzungen* des Dropdown-Menüs *Reporting* für einen ausgewählten Cluster können Sie Details zur Anzahl der aktiven Sitzungen auf dem Cluster und zur Anzahl der iSCSI-Sitzungen anzeigen, die auf dem Cluster aufgetreten sind.
 
 .Erweitern Sie das Beispiel für iSCSI-Sitzungen
+[%collapsible]
 ====
 image:iscsi_sessions.PNG["ISCSI-Sitzungen"]
 

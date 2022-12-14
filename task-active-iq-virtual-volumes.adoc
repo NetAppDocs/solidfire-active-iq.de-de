@@ -15,11 +15,11 @@ Auf der Seite *VVols*, die über das Seitenfeld eines ausgewählten Clusters ver
 
 Weitere Informationen zu VVols-bezogenen Aufgaben:
 
-*  Volumes
-*  Containers
-*  Endpoints
-* 
-* 
+* <<Virtual Volumes>>
+* <<Storage-Container>>
+* <<Protokollendpunkte>>
+* <<Hosts>>
+* <<Bindungen>>
 
 
 

@@ -13,9 +13,9 @@ summary: Erfahren Sie mehr über das Anzeigen von Volume-Details in SolidFire Ac
 [role="lead"]
 Auf der Seite *Volumes* können Sie Details zu aktiven Volumes, einzelnen Volumes und Performance-Diagrammen anzeigen:
 
-*  active volume details
-*  individual volume details
-*  individual volume performance graphs
+* <<Details zum aktiven Volume anzeigen>>
+* <<Details zu einzelnen Volumes anzeigen>>
+* <<Individuelle Volume-Performance-Diagramme anzeigen>>
 
 
 

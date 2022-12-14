@@ -15,8 +15,8 @@ Auf der Seite *QoS Management* > *Node Drosseling*, die im Seitenbereich für ei
 
 Erfahren Sie mehr über das Anzeigen von Informationen zur Knotendrosselung:
 
-*  graphs and select date ranges
-*  node throttling data
+* <<Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus>>
+* <<Exportieren der Knotendrosselung von Daten>>
 
 
 
@@ -30,6 +30,7 @@ Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Re
 Die Diagramme zeigen die Node-Drosselung über den ausgewählten Zeitraum basierend auf den Mindest- und Höchstwerten für die auf dem ausgewählten Node gehosteten Volumes an. Die Farbe stellt die Menge der Drosselung dar: Grün (keine), gelb (begrenzt) oder rot (hoch). Weitere Informationen finden Sie im folgenden Diagramm-Beispiel:
 
 .Erweitern Sie das Diagramm-Beispiel
+[%collapsible]
 ====
 image:node_throttling_range.PNG["Diagramm zur Knotendrosselung"]
 
