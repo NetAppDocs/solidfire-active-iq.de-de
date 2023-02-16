@@ -279,7 +279,7 @@ Die Richtlinie wird dauerhaft aus dem System entfernt.
 
 Auf der Seite *unterdrückte Cluster* im Dropdown-Menü *Warnungen* in der *Alle Cluster-Ansicht* können Sie eine Liste mit Clustern anzeigen, bei denen Warnungen unterdrückt werden.
 
-NetApp Support oder Kunden können Warnungsbenachrichtigungen für ein Cluster bei Wartungsarbeiten unterdrücken. Wenn Benachrichtigungen bei einem Cluster mithilfe der Upgrade-Unterdrückung unterdrückt werden, werden allgemeine Warnmeldungen, die während Upgrades auftreten, nicht gesendet. Es gibt außerdem eine Option zur vollständigen Alarmunterdrückung, mit der die Alarmierung für ein Cluster für eine bestimmte Dauer angehalten wird. Sie können alle E-Mail-Warnungen anzeigen, die nicht gesendet werden, wenn Benachrichtigungen unterdrückt werden, auf der Seite *Verlauf* des Menüs *Alarme*. Unterdrückte Benachrichtigungen werden nach Ablauf der festgelegten Dauer automatisch wieder aufgenommen.
+NetApp Support oder Kunden können Warnungsbenachrichtigungen für ein Cluster bei Wartungsarbeiten unterdrücken. Wenn Benachrichtigungen bei einem Cluster mithilfe der Upgrade-Unterdrückung unterdrückt werden, werden allgemeine Warnmeldungen, die während Upgrades auftreten, nicht gesendet. Es gibt außerdem eine Option zur vollständigen Alarmunterdrückung, mit der die Alarmierung für ein Cluster für eine bestimmte Dauer angehalten wird. Sie können alle E-Mail-Warnungen anzeigen, die nicht gesendet werden, wenn Benachrichtigungen unterdrückt werden, auf der Seite *Verlauf* des Menüs *Alarme*. Unterdrückte Benachrichtigungen werden nach Ablauf der festgelegten Dauer automatisch wieder aufgenommen. Sie können die Unterdrückung von Benachrichtigungen frühzeitig beenden, indem Sie im Dropdown-Menü die Option „Benachrichtigungen fortsetzen“ wählen.
 
 Die folgenden Informationen finden Sie auf der Seite *unterdrückte Cluster*.
 
@@ -297,7 +297,7 @@ Die folgenden Informationen finden Sie auf der Seite *unterdrückte Cluster*.
 | Cluster-Name | Dem Cluster zugewiesener Name 
 
 
-| Startzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen gestartet wurde. 
+| Startzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen gestartet oder geplant ist. 
 
 
 | Endzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen geplant ist, um zu beenden 
@@ -317,13 +317,22 @@ Legt fest, welche Warnmeldungen und Ereignisse unterdrückt werden. Folgende Typ
 
 
 
+| Status  a| 
+Zeigt den Status einer Benachrichtigung an:
+
+* *Aktiv*: Die Unterdrückung von Warnungen ist aktiv.
+* *Zukunft*: Die Unterdrückung von Alarmen-Benachrichtigungen ist für ein zukünftiges Datum und eine spätere Zeit geplant.
+
+
+
+
 | Aktionen | Wählen Sie die Option aus, um Benachrichtigungen für ein Cluster zu unterdrücken oder wieder aufzunehmen. 
 |===
 
 
 == Cluster-Benachrichtigungen unterdrücken
 
-Sie können Alarmbenachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster oder mehrere Cluster unterdrücken.
+Sie können Benachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster oder mehrere Cluster für das aktuelle Datum und die aktuelle Uhrzeit unterdrücken oder mit einem späteren Zeitpunkt beginnen.
 
 .Schritte
 . Führen Sie einen der folgenden Schritte aus:
@@ -338,8 +347,9 @@ Sie können Alarmbenachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster
 .. Wählen Sie einen Alarmunterdrückungstyp entweder als *Full*, *Upgrades*, *Compute*, *NodeHardware*, *Drive*, *Netzwerk* oder *Power*. <<suppressed_types,Erfahren Sie mehr über Unterdrückungstypen>>.
 +
 
-NOTE: Ein Cluster kann mehrere Unterdrückungstypen haben, kann aber keinen Unterdrückungstyp gemeinsam nutzen. Ein Cluster kann beispielsweise eine *Full*-, *Compute*- und *Drive*-Unterdrückung haben, aber keine zwei *Full*-Unterdrückung. Wenn eine Unterdrückung bereits in einem Cluster vorhanden ist, ist sie ausgegraut. Um eine bestehende Unterdrückung zu ersetzen, wählen Sie *vorhandene* überschreiben und den neuen Unterdrückungstyp aus.
+NOTE: Ein Cluster kann mehrere Unterdrückungstypen aufweisen, die mehrere Auswahlen desselben Unterdrückungstyps umfassen können. Wenn während eines geplanten Unterdrückungsfensters bereits ein Unterdrückungstyp vorhanden ist, ist er ausgegraut. Um diesen Unterdrückungstyp erneut auszuwählen, wählen Sie *Überlappung vorhanden* aus. Eine Mehrfachauswahl desselben Unterdrückungstyps kann sich überschneidende Zeiten haben oder, wenn Sie zukünftige Unterdrückungen planen, zu unterschiedlichen Zeiten liegen. Wenn zwei Unterdrückungen sich überschneidende Zeitperioden haben, ist die Funktionalität die gleiche wie eine einzige Unterdrückung mit einer Startzeit, die frühestens nach den Übersuppressions beginnt und spätestens eine Endzeit endet.
 
+.. Wählen Sie das Startdatum und die Startzeit, die die Unterdrückung von Benachrichtigungen starten soll.
 .. Wählen Sie eine allgemeine Dauer aus, oder geben Sie ein benutzerdefiniertes Enddatum und eine Uhrzeit ein, während der Benachrichtigungen unterdrückt werden sollen.
 
 
