@@ -17,6 +17,8 @@ Erfahren Sie mehr über die Seiten zu Cluster-Paaren und Volumes-Paaren:
 
 * <<cluster_pairs,Cluster-Paare>>
 * <<volume_pairs,Volume-Paare>>
+* <<snapmirror_endpoints,SnapMirror Endpunkte>>
+* <<snapmirror_relationships,SnapMirror Beziehungen>>
 
 
 
@@ -94,6 +96,97 @@ NOTE: Ein Ziel-Volume im aktiven Replikationszustand hat immer eine asynchrone V
 |===
 
 
+== SnapMirror Endpunkte
+
+Auf der Seite *Replication* > *SnapMirror Endpoints* für einen ausgewählten Cluster können Sie die folgenden Informationen zu SnapMirror Endpunkten anzeigen.
+
+[cols="30,70"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Endpunkt-ID | Die ID-Nummer des Endpunkts. 
+
+
+| Remote-Cluster-Name | Name des Remote-Clusters des Paars. 
+
+
+| Cluster-Management-IP | Cluster-Management-IP-Adresse. 
+
+
+| IPS | Der Bereich der virtuellen Netzwerk-IP-Adressen, die für das virtuelle Netzwerk verwendet werden. 
+
+
+| Beziehungen | Die Anzahl der für einen Endpunkt konfigurierten Beziehungen. 
+
+
+| Status | Dies bezieht sich darauf, ob der Endpunkt derzeit verbunden ist oder nicht. Es hat einen Wert von *connected* oder *disconnected*. 
+|===
+
+
+== SnapMirror Beziehungen
+
+Auf der Seite *Replication* > *SnapMirror Relationships* für einen ausgewählten Cluster können Sie die folgenden Informationen zu SnapMirror Beziehungen anzeigen.
+
+[cols="30,70"]
+|===
+| Überschrift | Beschreibung 
+
+
+| Endpunkt-ID | Die ID-Nummer des Endpunkts. 
+
+
+| Quell-Volume | Die Volume-ID der Quelle. 
+
+
+| Ziel-Cluster | Der Name des Ziel-Clusters in der SnapMirror-Beziehung. 
+
+
+| Ziel-Volume | Der Name des Ziel-Volume in der SnapMirror-Beziehung. 
+
+
+| Bundesland  a| 
+Der Zustand der Spiegelbeziehung. Es können drei mögliche Werte sein:
+
+* Nicht initialisiert: Das Ziel-Volume wurde nicht initialisiert.
+* Snapmirrored: Das Ziel-Volume wird initialisiert und ist bereit, SnapMirror Updates zu erhalten.
+* Abgebrochen: Das Zielvolume befindet sich im Lese-/Schreibzustand und Snapshots sind vorhanden.
+
+
+
+
+| Status  a| 
+Wenn die Beziehung derzeit gesund ist, kann sie einen Wert von *gesund* oder *ungesund* haben.
+
+
+NOTE: Wenn eine manuelle oder geplante Aktualisierung fehlschlägt oder abgebrochen wird oder die letzte geplante Aktualisierung verzögert wird, kann dies zu einem *ungesunden* Wert führen. Das Feld *Details*, das dem Status folgt, zeigt den Grund für den Status *ungesund* an.
+
+
+
+| Beziehungstyp  a| 
+Die Art der SnapMirror-Beziehung.
+
+
+NOTE: Auf SolidFire Systemen ist diese Einstellung immer auf festgelegt `extended_data_protection`. NetApp Systeme besitzen andere Arten von gültigen Beziehungen, die bei SolidFire Systemen nicht gelten.
+
+
+
+| Bundesland  a| 
+Der Status des Clusters:
+
+* Zustand: Mit dem Cluster sind keine kritischen Fehler verbunden.
+* Offline: Zugriff auf das Cluster nicht möglich. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+* Fehler: Mit diesem Cluster sind Fehler verbunden. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.
+
+
+
+
+| Details | Informationen, die zum Identifizieren der SnapMirror Beziehung beitragen. 
+|===
+
+
 == Weitere Informationen
 
-https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]
+* https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]
+* https://docs.netapp.com/us-en/ontap/element-replication/index.html["Replizierung zwischen NetApp Element Software und ONTAP"^]
+

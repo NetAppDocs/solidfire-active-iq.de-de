@@ -66,7 +66,6 @@
   <block id="78cf8ce506d5cd24bcd85ed03795e147" category="cell">Seriennummer</block>
   <block id="99e27a3b4d4ede370056195c4b29c8df" category="cell">Dem Node zugewiesene eindeutige Seriennummer.</block>
   <block id="32aa0bd7b7946c62f9c5214e91fa1db6" category="cell">Management-IP</block>
-  <block id="0b78ef57d4dacade728a829821159de3" category="cell">Der Node zugewiesene Management-IP-Adresse für 1-GbE- oder 10-GbE-Netzwerkadministratoraufgaben.</block>
   <block id="70087224b93e8179deda7438fae8e843" category="cell">Cluster-IP</block>
   <block id="4d08639c19d21e8b1b2dd93fd1ecb110" category="cell">Die Cluster-IP-Adresse ist dem Node zugewiesen, der für die Kommunikation zwischen Nodes im selben Cluster verwendet wird.</block>
   <block id="dbc7f5bd401ce78c24749d6c2a29fb42" category="cell">Storage-IP</block>
@@ -1070,4 +1069,41 @@
   <block id="57829e1c527aadb9862b10c223954f81" category="paragraph">Sie können Benachrichtigungen auf Cluster-Ebene für ein einzelnes Cluster oder mehrere Cluster für das aktuelle Datum und die aktuelle Uhrzeit unterdrücken oder mit einem späteren Zeitpunkt beginnen.</block>
   <block id="fb0d7f8aefdf99cea1fcfde269bee06a" category="admonition">Ein Cluster kann mehrere Unterdrückungstypen aufweisen, die mehrere Auswahlen desselben Unterdrückungstyps umfassen können. Wenn während eines geplanten Unterdrückungsfensters bereits ein Unterdrückungstyp vorhanden ist, ist er ausgegraut. Um diesen Unterdrückungstyp erneut auszuwählen, wählen Sie *Überlappung vorhanden* aus. Eine Mehrfachauswahl desselben Unterdrückungstyps kann sich überschneidende Zeiten haben oder, wenn Sie zukünftige Unterdrückungen planen, zu unterschiedlichen Zeiten liegen. Wenn zwei Unterdrückungen sich überschneidende Zeitperioden haben, ist die Funktionalität die gleiche wie eine einzige Unterdrückung mit einer Startzeit, die frühestens nach den Übersuppressions beginnt und spätestens eine Endzeit endet.</block>
   <block id="8c585eacf0d12977061621d6833ec987" category="list-text">Wählen Sie das Startdatum und die Startzeit, die die Unterdrückung von Benachrichtigungen starten soll.</block>
+  <block id="28b4baca1ac41f0c9cbe42a9ec42628e" category="inline-xref">SnapMirror Endpunkte</block>
+  <block id="ac1101609fb27790d21f3e5682730a46" category="list-text"><block ref="6106c5f20c38abc927c216f441b22257" category="inline-xref-macro-rx"></block></block>
+  <block id="b7bae3475f98c5511fcd900e6b4c8f8c" category="inline-xref">SnapMirror Beziehungen</block>
+  <block id="ad2c46e1bdf00bc2c2373e711d1d2954" category="list-text"><block ref="c593ef727a82bdc9f5c1b753b116f514" category="inline-xref-macro-rx"></block></block>
+  <block id="f17f50f30412e2177a16f9b4da89f874" category="paragraph">Auf der Seite *Replication* &gt; *SnapMirror Endpoints* für einen ausgewählten Cluster können Sie die folgenden Informationen zu SnapMirror Endpunkten anzeigen.</block>
+  <block id="6bb4d406451e3685e40319c445ae0352" category="cell">Endpunkt-ID</block>
+  <block id="32246b37b740b49b6825d9f37e2ee6c5" category="cell">Die ID-Nummer des Endpunkts.</block>
+  <block id="0e948943e8277507eeeec08bbb91d3b4" category="cell">Cluster-Management-IP</block>
+  <block id="6e24b6e3023bd7d9208c26111ae95b8d" category="cell">Cluster-Management-IP-Adresse.</block>
+  <block id="fef48b3b39a9c7cdf35ffca8bf736a75" category="cell">IPS</block>
+  <block id="ea96be9e75d8d3d690aedae5040edf2f" category="cell">Beziehungen</block>
+  <block id="8f8605419f690965c300901a20d62391" category="cell">Die Anzahl der für einen Endpunkt konfigurierten Beziehungen.</block>
+  <block id="718d288064e78f83f1ba4c375c26c029" category="cell">Dies bezieht sich darauf, ob der Endpunkt derzeit verbunden ist oder nicht. Es hat einen Wert von *connected* oder *disconnected*.</block>
+  <block id="028ac3812784d5be0fd01695fc043cff" category="paragraph">Auf der Seite *Replication* &gt; *SnapMirror Relationships* für einen ausgewählten Cluster können Sie die folgenden Informationen zu SnapMirror Beziehungen anzeigen.</block>
+  <block id="6b381cadf674c5e31b229c76f56806c5" category="cell">Quell-Volume</block>
+  <block id="5fc8efaf812ad6d749473c5b1e7a1d08" category="cell">Die Volume-ID der Quelle.</block>
+  <block id="3b63d6a8b8cc0fb1c86125151f2eca0a" category="cell">Ziel-Cluster</block>
+  <block id="64afd1e289d3d4ac65cd7bae034156d3" category="cell">Der Name des Ziel-Clusters in der SnapMirror-Beziehung.</block>
+  <block id="61bf1d352b9b723607cb778169e813a0" category="cell">Ziel-Volume</block>
+  <block id="0ebc9eebbe2a97262f813b92e1f22992" category="cell">Der Name des Ziel-Volume in der SnapMirror-Beziehung.</block>
+  <block id="46a2a41cc6e552044816a2d04634545d" category="cell">Bundesland</block>
+  <block id="1fdf08bae98f520da3e0d1b2000eabac" category="paragraph">Der Zustand der Spiegelbeziehung. Es können drei mögliche Werte sein:</block>
+  <block id="8881a06cabd3e842b7977e9044018e5d" category="list-text">Nicht initialisiert: Das Ziel-Volume wurde nicht initialisiert.</block>
+  <block id="baaef4c79409be356afa390f0a267777" category="list-text">Snapmirrored: Das Ziel-Volume wird initialisiert und ist bereit, SnapMirror Updates zu erhalten.</block>
+  <block id="8ea0f60fec4bd7852564eff6914e37e5" category="list-text">Abgebrochen: Das Zielvolume befindet sich im Lese-/Schreibzustand und Snapshots sind vorhanden.</block>
+  <block id="2177b3ffa647aac85952207f57133f55" category="paragraph">Wenn die Beziehung derzeit gesund ist, kann sie einen Wert von *gesund* oder *ungesund* haben.</block>
+  <block id="163c9089cced4c196e834ce87a1ec90e" category="admonition">Wenn eine manuelle oder geplante Aktualisierung fehlschlägt oder abgebrochen wird oder die letzte geplante Aktualisierung verzögert wird, kann dies zu einem *ungesunden* Wert führen. Das Feld *Details*, das dem Status folgt, zeigt den Grund für den Status *ungesund* an.</block>
+  <block id="2029c90a49e8add716fcc3051a0c01ff" category="cell">Beziehungstyp</block>
+  <block id="b2896d0a757d4adea7b0bf1946d16ab9" category="paragraph">Die Art der SnapMirror-Beziehung.</block>
+  <block id="2e5e6f53be4c64301d71ec17f9666006" category="admonition">Auf SolidFire Systemen ist diese Einstellung immer auf festgelegt<block ref="a6c02c92cdc6c7fe213f68be0ab9ee11" prefix=" " category="inline-code"></block>. NetApp Systeme besitzen andere Arten von gültigen Beziehungen, die bei SolidFire Systemen nicht gelten.</block>
+  <block id="ddf35be1d25ba7857330965fdbcd63ec" category="paragraph">Der Status des Clusters:</block>
+  <block id="6c1691f6c440f43922bce2a3183b9614" category="list-text">Zustand: Mit dem Cluster sind keine kritischen Fehler verbunden.</block>
+  <block id="353d8a4aaa6f9c840d2d0330d5cb9610" category="list-text">Offline: Zugriff auf das Cluster nicht möglich. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.</block>
+  <block id="9810bf56aaa37a450fe2ace2a59a888f" category="list-text">Fehler: Mit diesem Cluster sind Fehler verbunden. Wählen Sie den Link aus, um das Fehlerprotokoll anzuzeigen.</block>
+  <block id="9f360968c28895acf09b091f83e3603f" category="cell">Informationen, die zum Identifizieren der SnapMirror Beziehung beitragen.</block>
+  <block id="42a1881fef50454fa6bd56b43e9ed96e" category="inline-link">Replizierung zwischen NetApp Element Software und ONTAP</block>
+  <block id="ccae24276cef39694a819c260df1defb" category="list-text"><block ref="ccae24276cef39694a819c260df1defb" category="inline-link-rx"></block></block>
 </blocks>
