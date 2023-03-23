@@ -1106,4 +1106,5 @@
   <block id="9f360968c28895acf09b091f83e3603f" category="cell">Informationen, die zum Identifizieren der SnapMirror Beziehung beitragen.</block>
   <block id="42a1881fef50454fa6bd56b43e9ed96e" category="inline-link">Replizierung zwischen NetApp Element Software und ONTAP</block>
   <block id="ccae24276cef39694a819c260df1defb" category="list-text"><block ref="ccae24276cef39694a819c260df1defb" category="inline-link-rx"></block></block>
+  <block id="f5f48e4a05f564b44c9541295334dd2e" category="paragraph">Um einen bestimmten Kapazitätslizenzpool anzuzeigen, müssen Sie über die Berechtigungen verfügen, um alle in diesem Pool enthaltenen Cluster anzuzeigen. Wenn es Beziehungen zwischen Eltern- und untergeordneten Unternehmen gibt, prüfen Sie gemeinsam mit Ihrem Account Manager, ob diese korrekt aufgezeichnet wurden. Andernfalls kann der Kapazitätslizenzpool nicht mehr verfügbar sein.</block>
 </blocks>

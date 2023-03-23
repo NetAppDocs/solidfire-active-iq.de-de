@@ -13,6 +13,8 @@ summary: Erfahren Sie mehr über die Seite Kapazitätslizenzierung in SolidFire 
 [role="lead"]
 Auf der Seite *Kapazitätslizenzierung* von *Alle Cluster View* können Sie Informationen zum NetApp Kapazitätslizenzmodell anzeigen. Kunden, die Standard SolidFire Appliances verwenden, sollten diese Seite nicht ignorieren.
 
+Um einen bestimmten Kapazitätslizenzpool anzuzeigen, müssen Sie über die Berechtigungen verfügen, um alle in diesem Pool enthaltenen Cluster anzuzeigen. Wenn es Beziehungen zwischen Eltern- und untergeordneten Unternehmen gibt, prüfen Sie gemeinsam mit Ihrem Account Manager, ob diese korrekt aufgezeichnet wurden. Andernfalls kann der Kapazitätslizenzpool nicht mehr verfügbar sein.
+
 Die Kapazitätslizenzierung ist eine von NetApp erhältliche alternative Lizenzoption. Hier finden Sie Informationen zu Aufgaben, die mit der Kapazitätslizenzierung in Verbindung stehen:
 
 [cols="25,75"]
