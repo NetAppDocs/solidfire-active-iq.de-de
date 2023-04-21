@@ -23,11 +23,18 @@ Erfahren Sie mehr über das Anzeigen von Informationen zur Knotendrosselung:
 
 == Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus
 
-Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich alle Diagramme auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage.
+Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich die Diagramme *Knotendrosselung* und *Gesamtvolumendurchsatz* auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage. Wenn Sie einen Knoten auf den Registerkarten für die Diagrammauswahl auswählen, werden diese Diagramme zum neu ausgewählten Knoten.
 
 Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Darüber hinaus können Sie ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten gelangen. Sie können zwischen den Diagrammen wechseln, indem Sie die Miniaturansichten auf der linken Seite auswählen.
 
-Die Diagramme zeigen die Node-Drosselung über den ausgewählten Zeitraum basierend auf den Mindest- und Höchstwerten für die auf dem ausgewählten Node gehosteten Volumes an. Die Farbe stellt die Menge der Drosselung dar: Grün (keine), gelb (begrenzt) oder rot (hoch). Weitere Informationen finden Sie im folgenden Diagramm-Beispiel:
+Das Diagramm *Node Drosselung* zeigt die Knotendrosselung über den ausgewählten Zeitraum an, basierend auf den minimalen und maximalen IOPS-Einstellungen für die Volumes, die auf dem ausgewählten Knoten gehostet werden. Die Farbe gibt die Menge der Drosselung an:
+
+* Grün: Der Knoten wird nicht gedrosselt. Volumes können bis zu ihrer maximalen konfigurierten IOPS ausführen.
+* Gelb: Der Knoten hat eine eingeschränkte Drosselung. Die Volumes werden von der maximalen IOPS-Einstellung gedrosselt, behalten aber die Performance immer noch mit der minimalen IOPS-Einstellung oder darüber bei.
+* Rot: Der Knoten hat eine hohe Drosselung. Wenn die Volumes stärker gedrosselt werden, kann die Performance unter dem IOPS-Minimum sinken.
+
+
+Das Diagramm *Total Volume Throughput* zeigt die Summe des Durchsatzes für die primären Volumes für einen ausgewählten Knoten an. Das Diagramm zeigt die Summe des Lese- und Schreibdurchsatzes des Volumes. Metadaten oder anderer Node-Traffic werden nicht berücksichtigt. Sie berücksichtigt auch, wenn Volumes auf einem Node vorhanden sind. Dies führt zu einem Rückgang des Durchsatzes, wenn Volumes von einem Node übertragen werden.
 
 .Erweitern Sie das Diagramm-Beispiel
 [%collapsible]
