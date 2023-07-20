@@ -160,7 +160,7 @@ Zeigt an, wie voll das Volume ist:
 | 512e aktiviert | Identifiziert, wenn 512e auf einem Volume aktiviert ist. 
 
 
-| QoS-Gasbetätigung | Identifiziert, ob das Volume gedrosselt wird, weil der primäre Storage-Node sehr stark belastet ist. 
+| QoS-Gasbetätigung | Stellt die aktuelle Drosselung für das Volume dar. Der Wert enthält keine historische Drosselung auf dem Volume. 
 
 
 | Primäre Knoten-ID | Primärer Node für dieses Volume. 
