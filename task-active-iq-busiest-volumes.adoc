@@ -1,0 +1,52 @@
+---
+permalink: task-active-iq-busiest-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, volumes, busiest 
+summary: Erfahren Sie mehr über die Seite „umsatzstärksten Volumes“ in SolidFire Active IQ. 
+---
+= Größte Volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Seite *QoS Management* > *belebteste Volumes*, die über das Seitenfenster für einen ausgewählten Cluster verfügbar ist, können Sie die zehn Volumes mit dem höchsten Durchsatz für einen ausgewählten Knoten und Zeitbereich im Cluster anzeigen.
+
+Erfahren Sie mehr über die Anzeige der Informationen zu den meisten Volumes:
+
+* <<Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus>>
+* <<Exportieren Sie die Daten der am stärksten ausgelasteten Knoten>>
+
+
+
+
+== Zeigen Sie Diagramme an und wählen Sie Datumsbereiche aus
+
+Nach Auswahl des Node aus der Dropdown-Liste werden die zehn Volumes mit dem höchsten Durchsatz auf diesem Node angezeigt. Für jedes Volume können Sie die Diagramme *Throughput*, *Average IO Size*, *IOPS* und *Latency* anzeigen; um das letzte Diagramm anzuzeigen, müssen Sie möglicherweise auf der Seite nach unten blättern. Um zwischen Volumes zu wechseln, wählen Sie die Miniaturansichten links aus. Wenn Sie einen anderen Knoten auswählen, werden diese Diagramme in den neu ausgewählten Knoten geändert.
+
+Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich die Diagramme auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage. Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Sie können auch ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten bürsten. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Wenn Sie den ausgewählten Datumsbereich für einen Knoten ändern, können sich auch die zehn am stärksten ausgelasteten Volumes ändern.
+
+.Erweitern Sie das Diagramm-Beispiel
+[%collapsible]
+====
+image:busiest_volumes.PNG["Grafische Anzeige für die meisten Volumes"]
+
+====
+Positionieren Sie den Mauszeiger an einem beliebigen Punkt im Diagramm, um Point-in-Time-Details für die Lese-, Schreib- und Gesamtvorgänge anzuzeigen. Wenn ein Volumen auf dem Knoten für einen Teil des ausgewählten Zeitbereichs nicht vorhanden ist, wird es durch eine gepunktete Linie dargestellt
+
+
+
+== Exportieren Sie die Daten der am stärksten ausgelasteten Knoten
+
+Sie können Diagrammdaten in ein CSV-Format (kommagetrennte Werte) exportieren. Nur die im Diagramm angezeigten Informationen werden exportiert.
+
+.Schritte
+. Wählen Sie in einer Listenansicht oder Grafik die aus image:export_button.PNG["Schaltfläche Exportieren"] Symbol.
+
+
+
+
+== Weitere Informationen
+
+https://www.netapp.com/support-and-training/documentation/["NetApp Produktdokumentation"^]

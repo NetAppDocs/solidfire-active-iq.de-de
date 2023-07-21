@@ -25,7 +25,7 @@ Erfahren Sie mehr über das Anzeigen von Informationen zur Knotendrosselung:
 
 Die Diagramme und Datumsbereiche in SolidFire Active IQ sind nahtlos miteinander integriert. Wenn Sie einen Datumsbereich auswählen, passen sich die Diagramme *Knotendrosselung* und *Gesamtvolumendurchsatz* auf dieser Seite an den ausgewählten Bereich an. Der für jedes Diagramm standardmäßig angezeigte Datumsbereich beträgt sieben Tage. Wenn Sie einen Knoten auf den Registerkarten für die Diagrammauswahl auswählen, werden diese Diagramme zum neu ausgewählten Knoten.
 
-Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Darüber hinaus können Sie ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten gelangen. Sie können zwischen den Diagrammen wechseln, indem Sie die Miniaturansichten auf der linken Seite auswählen.
+Sie können einen Datumsbereich aus dem Dropdown-Feld Kalender oder aus einer Reihe vordefinierter Bereiche auswählen. Die Datumsbereiche werden anhand der aktuellen Browserzeit (zum Zeitpunkt der Auswahl) und der konfigurierten Zeitdauer berechnet. Sie können auch ein gewünschtes Intervall auswählen, indem Sie direkt über das Balkendiagramm unten bürsten. Um zwischen Diagrammen zu wechseln, wählen Sie die Miniaturansichten links aus.
 
 Das Diagramm *Node Drosselung* zeigt die Knotendrosselung über den ausgewählten Zeitraum an, basierend auf den minimalen und maximalen IOPS-Einstellungen für die Volumes, die auf dem ausgewählten Knoten gehostet werden. Die Farbe gibt die Menge der Drosselung an:
 
@@ -39,7 +39,7 @@ Das Diagramm *Total Volume Throughput* zeigt die Summe des Durchsatzes für die 
 .Erweitern Sie das Diagramm-Beispiel
 [%collapsible]
 ====
-image:node_throttling_range.PNG["Diagramm zur Knotendrosselung"]
+image:node_throttling_range.PNG["Grafische Anzeige für Node-Drosselung"]
 
 ====
 Positionieren Sie den Mauszeiger an einem beliebigen Punkt im Diagramm, um zu den Point-in-Time-Details zu sehen.
