@@ -55,12 +55,14 @@ Aktuell genutzte Kapazität des Volumes:
 
 
 | QoS-Gasbetätigung  a| 
-Identifiziert, ob das Volume gedrosselt wird, weil der primäre Storage-Node sehr stark belastet ist:
+Stellt die aktuelle Drosselung für das Volume dar.
 
 * Grün = bis zu 20 %
 * Gelb = über 20 %
 * Rot = über 80 %
 
+
+Der Wert enthält keine historische Drosselung auf dem Volume.
 
 
 
@@ -112,12 +114,7 @@ Nachdem die Seite für das aktive Volume geöffnet wurde, können Sie die letzte
 
 
 | Genutzte Kapazität  a| 
-Zeigt an, wie voll das Volume ist:
-
-* Grün = bis zu 80 %
-* Gelb = über 80 %
-* Rot = über 95 %.
-
+Zeigt an, wie voll das Volume ist.
 
 
 
