@@ -89,7 +89,7 @@ In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung 
 
 == Anzeigen von Meldungsrichtlinien
 
-Auf der Seite *Richtlinien* im Dropdown-Menü *Alarme* in *Alle Cluster-Ansicht* werden die folgenden Richtlinieninformationen für alle Cluster angezeigt.
+Auf der Seite *Policies* im Dropdown-Menü Warnungen in der Ansicht Alle Cluster werden die folgenden Richtlinieninformationen für alle Cluster angezeigt.
 
 In der folgenden Liste werden die Details beschrieben, die Ihnen zur Verfügung stehen:
 
@@ -277,11 +277,11 @@ Die Richtlinie wird dauerhaft aus dem System entfernt.
 
 == Unterdrückte Cluster anzeigen
 
-Auf der Seite *unterdrückte Cluster* im Dropdown-Menü *Warnungen* in der *Alle Cluster-Ansicht* können Sie eine Liste mit Clustern anzeigen, bei denen Warnungen unterdrückt werden.
+Auf der Seite *suppressed Clusters* im Dropdown-Menü Alerts in der Ansicht All Clusters können Sie eine Liste von Clustern anzeigen, in denen Warnmeldungen unterdrückt werden.
 
 NetApp Support oder Kunden können Warnungsbenachrichtigungen für ein Cluster bei Wartungsarbeiten unterdrücken. Wenn Benachrichtigungen bei einem Cluster mithilfe der Upgrade-Unterdrückung unterdrückt werden, werden allgemeine Warnmeldungen, die während Upgrades auftreten, nicht gesendet. Es gibt außerdem eine Option zur vollständigen Alarmunterdrückung, mit der die Alarmierung für ein Cluster für eine bestimmte Dauer angehalten wird. Sie können alle E-Mail-Warnungen anzeigen, die nicht gesendet werden, wenn Benachrichtigungen unterdrückt werden, auf der Seite *Verlauf* des Menüs *Alarme*. Unterdrückte Benachrichtigungen werden nach Ablauf der festgelegten Dauer automatisch wieder aufgenommen. Sie können die Unterdrückung von Benachrichtigungen frühzeitig beenden, indem Sie im Dropdown-Menü die Option „Benachrichtigungen fortsetzen“ wählen.
 
-Die folgenden Informationen finden Sie auf der Seite *unterdrückte Cluster*.
+Auf der Seite *suppressed Clusters* haben Sie die Möglichkeit, folgende Informationen für *past*, *Active* und *future* Unterdrückungen anzuzeigen. Die Option *past* zeigt die Unterdrückungen an, die in den letzten 90 Tagen beendet wurden.
 
 [cols="25,75"]
 |===
@@ -295,6 +295,15 @@ Die folgenden Informationen finden Sie auf der Seite *unterdrückte Cluster*.
 
 
 | Cluster-Name | Dem Cluster zugewiesener Name 
+
+
+| Erstellt Von | Der Account-Benutzername, der die Unterdrückung erstellt hat. 
+
+
+| Erstellungszeit | Der genaue Zeitpunkt, zu dem die Unterdrückung erstellt wurde. 
+
+
+| Uhrzeit Aktualisiert | Wenn die Unterdrückung nach ihrer Erstellung geändert wurde, ist dies der genaue Zeitpunkt, zu dem die Unterdrückung zuletzt geändert wurde. 
 
 
 | Startzeit | Die genaue Zeit, zu der die Unterdrückung von Benachrichtigungen gestartet oder geplant ist. 
@@ -326,7 +335,13 @@ Zeigt den Status einer Benachrichtigung an:
 
 
 
-| Aktionen | Wählen Sie die Option aus, um Benachrichtigungen für ein Cluster zu unterdrücken oder wieder aufzunehmen. 
+| Geplant  a| 
+Zeigt an, ob die Unterdrückung zum Zeitpunkt der Erstellung geplant wurde:
+
+* *True*: Die Werte für die erstellte Zeit und die Startzeit sind identisch.
+* *False*: Die Werte für die erstellte Zeit und die Startzeit sind unterschiedlich.
+
+
 |===
 
 
